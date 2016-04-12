@@ -1,0 +1,31 @@
+Country,Code,2013 Rank,2012 Rank,Change,Region,Market Attractiveness,Country Risk,Market Saturation,Time Pressure,GRDI Score,Status
+Brazil,BRA,1,1,0,Latin America,100,86.2,43.3,48.3,69.5,On The Radar
+Chile,CHL,2,2,0,Latin America,95.6,100,18.7,54.3,67.1,On The Radar
+Uruguay,URY,3,4,1,Latin America,92,73.9,63.5,36.5,66.5,On The Radar
+China,CHN,4,3,-1,Asia,62.1,67.9,34.3,100,66.1,On The Radar
+United Arab Emirates,ARE,5,7,2,MENA,95.8,94.6,3,60.8,63.5,On The Radar
+Turkey,TUR,6,13,7,Eastern Europe,86.8,83.7,28.9,50.9,62.6,On The Radar
+Mongolia,MNG,7,9,2,Asia,17.7,37,99,96.5,62.5,On The Radar
+Georgia,GEO,8,6,-2,Central Asia,36.6,63.8,83.4,61.9,61.4,On The Radar
+Kuwait,KWT,9,12,3,MENA,87.8,87.1,36.4,22.2,58.4,On The Radar
+Armenia,ARM,10,-,-,Central Asia,32.3,63.6,93.5,43.6,58.2,On The Radar
+Kazakhstan,KAZ,11,19,8,Central Asia,44.1,51.9,76.2,57.8,57.5,To Consider
+Peru,PER,12,10,-2,Latin America,52.9,60.4,63.4,49.3,56.5,To Consider
+Malaysia,MYS,13,11,-2,Asia,63.4,95.8,22,39.8,55.3,To Consider
+India,IND,14,5,-9,Asia,36.8,59.4,63.3,60.6,55,To Consider
+Sri Lanka,LKA,15,15,0,Asia,16.6,60.5,81.8,58.6,54.4,To Consider
+Saudi Arabia,SAU,16,14,-2,MENA,71.4,79.2,35.6,30.7,54.2,To Consider
+Oman,OMN,17,8,-9,MENA,77.5,97.8,11.3,29.1,53.9,To Consider
+Colombia,COL,18,23,5,Latin America,59.2,73.6,43,32.4,52.1,To Consider
+Indonesia,IDN,19,16,-3,Asia,47.4,49.6,49.3,61.4,51.9,To Consider
+Jordan,JOR,20,18,-2,MENA,53.1,65,65.9,19.6,50.9,To Consider
+Mexico,MEX,21,28,7,Latin America,79,75,12.1,30.6,49.2,Lower Priority
+Panama,PAN,22,24,2,Latin America,49.7,70.8,37.2,37.2,48.7,Lower Priority
+Russia,RUS,23,26,3,Eastern Europe,92.4,44,21.1,37.4,48.7,Lower Priority
+Lebanon,LBN,24,22,-2,MENA,74.1,32.9,48.6,38.4,48.5,Lower Priority
+Botswana,BWA,25,20,-5,Sub-Saharan Africa,38.7,82,31.8,38.5,47.8,Lower Priority
+Namibia,NAM,26,-,-,Sub-Saharan Africa,20.8,77.1,12.6,73.2,45.9,Lower Priority
+Morocco,MAR,27,27,0,MENA,30.1,60.5,48.7,44,45.8,Lower Priority
+The former Yugoslav Republic of Macedonia,MKD,28,21,-7,Eastern Europe,40.7,42.3,56,43.9,45.7,Lower Priority
+Azerbaijan,AZE,29,17,-12,Central Asia,28.5,26,90.3,37.3,45.5,Lower Priority
+Albania,ALB,30,25,-5,Eastern Europe,30.6,35,73.6,40.9,45.1,Lower Priority

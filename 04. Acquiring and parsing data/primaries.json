@@ -1,0 +1,29 @@
+[
+  
+	{
+    "winner": "Clinton",
+    "delegates": 23,
+    "state": "Iowa",
+    "party": "Democrat"
+  },
+  
+	{
+    "winner": "Cruz",
+    "delegates": 8,
+    "state": "Iowa",
+    "party": "Republican"
+  },
+  
+	{
+    "winner": "Sanders",
+    "delegates": 15,
+    "state": "New Hampshire",
+    "party": "Democrat"
+  },
+  {
+    "winner": "Trump",
+    "delegates": 10,
+    "state": "New Hampshire",
+    "party": "Republican"
+  }
+]

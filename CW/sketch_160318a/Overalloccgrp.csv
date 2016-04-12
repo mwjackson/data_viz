@@ -1,0 +1,61 @@
+Age,Main_group,No job M,Male,No job F,Female,pdiff
+18-21,Administrative and secretarial occupations,21,13265,42,12183,0.08
+22-29,Administrative and secretarial occupations,121,18994,248,17492,0.08
+30-39,Administrative and secretarial occupations,148,23127,379,17595,0.24
+40-49,Administrative and secretarial occupations,130,25156,540,17216,0.32
+50-59,Administrative and secretarial occupations,122,24830,572,17353,0.3
+60+,Administrative and secretarial occupations,67,17626,229,12779,0.27
+18-21,ALL OCCUPATIONS,318,10908,359,8032,0.26
+22-29,ALL OCCUPATIONS,1597,21088,1564,17098,0.19
+30-39,ALL OCCUPATIONS,2632,29085,2405,20369,0.3
+40-49,ALL OCCUPATIONS,2916,32443,2890,18942,0.42
+50-59,ALL OCCUPATIONS,2405,30992,2615,17710,0.43
+60+,ALL OCCUPATIONS,998,22977,871,12191,0.47
+18-21,Associate professional and technical occupations,28,0,15,13743,0
+22-29,Associate professional and technical occupations,253,26034,216,23812,0.09
+30-39,Associate professional and technical occupations,500,32965,383,26690,0.19
+40-49,Associate professional and technical occupations,503,36982,370,26514,0.28
+50-59,Associate professional and technical occupations,368,36041,268,24577,0.32
+60+,Associate professional and technical occupations,108,27500,65,20084,0.27
+18-21,"Caring, leisure and other service occupations",19,7723,84,10390,-0.35
+22-29,"Caring, leisure and other service occupations",65,15305,297,12748,0.17
+30-39,"Caring, leisure and other service occupations",71,17801,338,11948,0.33
+40-49,"Caring, leisure and other service occupations",79,18715,472,12584,0.33
+50-59,"Caring, leisure and other service occupations",85,19137,403,13185,0.31
+60+,"Caring, leisure and other service occupations",43,15118,131,11442,0.24
+18-21,Elementary occupations,101,8916,84,5479,0.39
+22-29,Elementary occupations,224,15451,140,10259,0.34
+30-39,Elementary occupations,261,18038,163,8312,0.54
+40-49,Elementary occupations,253,19784,256,7754,0.61
+50-59,Elementary occupations,229,19419,261,8204,0.58
+60+,Elementary occupations,122,16089,119,5902,0.63
+18-21,"Managers, directors and senior officials",3,0,15,15277,0
+22-29,"Managers, directors and senior officials",94,25063,64,22086,0.12
+30-39,"Managers, directors and senior officials",316,39640,190,33120,0.16
+40-49,"Managers, directors and senior officials",502,47212,228,35241,0.25
+50-59,"Managers, directors and senior officials",403,46590,192,32002,0.31
+60+,"Managers, directors and senior officials",147,35275,56,20040,0.43
+18-21,"Process, plant and machine operatives",17,15137,5,13210,0.13
+22-29,"Process, plant and machine operatives",122,20653,26,16315,0.21
+30-39,"Process, plant and machine operatives",218,23567,37,15878,0.33
+40-49,"Process, plant and machine operatives",325,25462,52,16003,0.37
+50-59,"Process, plant and machine operatives",295,24270,55,15995,0.34
+60+,"Process, plant and machine operatives",155,19521,17,13672,0.3
+18-21,Professional occupations,9,16233,4,11958,0.26
+22-29,Professional occupations,260,29201,322,26848,0.08
+30-39,Professional occupations,626,38418,688,30602,0.2
+40-49,Professional occupations,639,42786,704,31648,0.26
+50-59,Professional occupations,483,41422,556,32335,0.22
+60+,Professional occupations,177,34547,126,22405,0.35
+18-21,Sales and customer service occupations,72,7057,107,5834,0.17
+22-29,Sales and customer service occupations,179,14534,226,11655,0.2
+30-39,Sales and customer service occupations,133,17715,192,11149,0.37
+40-49,Sales and customer service occupations,88,18472,221,11325,0.39
+50-59,Sales and customer service occupations,66,17657,255,10541,0.4
+60+,Sales and customer service occupations,37,11993,106,7648,0.36
+18-21,Skilled trades occupations,48,15891,x,0,0
+22-29,Skilled trades occupations,281,22559,25,15604,0.31
+30-39,Skilled trades occupations,358,25439,36,16784,0.34
+40-49,Skilled trades occupations,398,27300,48,13777,0.5
+50-59,Skilled trades occupations,354,27973,54,14722,0.47
+60+,Skilled trades occupations,141,24569,22,13163,0.46

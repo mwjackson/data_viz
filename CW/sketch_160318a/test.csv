@@ -1,0 +1,7 @@
+Occupation,Age,agegrp,Male,Female,percent
+"Managers, directors and senior officials",18-21,1,0,15,0
+"Managers, directors and senior officials",22-29,2,25,22,0.118780673
+"Managers, directors and senior officials",30-39,3,40,33,0.164480323
+"Managers, directors and senior officials",40-49,4,47,35,0.253558417
+"Managers, directors and senior officials",50-59,5,47,32,0.313114402
+"Managers, directors and senior officials",60+,6,35,20,0.431892275
