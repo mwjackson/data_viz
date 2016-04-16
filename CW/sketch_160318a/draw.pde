@@ -1,5 +1,5 @@
 
-void chart(float top, float left, Table PayTable) {
+void chart(String name, float chartTop, float chartLeft, Table PayTable) {
   float margin = 50;
   float graphWidth = 500;
   float graphHeight = 400;
@@ -8,13 +8,12 @@ void chart(float top, float left, Table PayTable) {
   //float plotX2, plotY2; // create a box within sketch width and height
 
   // Corners of the plotted chart
-  float plotX1 = left + margin;
-  float plotX2 = left + graphWidth;
-  float plotY1 = top + margin;
-  float plotY2 = top + graphHeight;
+  float plotX1 = chartLeft + margin; //<>//
+  float plotX2 = chartLeft + graphWidth;
+  float plotY1 = chartTop + margin;
+  float plotY2 = chartTop + graphHeight;
 
-  // No drawing yet, just a white background.
-  background(224);
+
 
   float leftBorder = 50;
   int numRows = PayTable.getRowCount();
@@ -24,7 +23,7 @@ void chart(float top, float left, Table PayTable) {
   fill(255);
   rectMode(CORNERS);
   noStroke();
-  println("x1: " + plotX1 + " x2: " + plotX2 + " y1: " + plotY1 + " y2: " + plotY2);
+  println("name: " + name + " x1: " + plotX1 + " x2: " + plotX2 + " y1: " + plotY1 + " y2: " + plotY2);
   rect(plotX1, plotY1, plotX2, plotY2);
 
   // Draw salary markers £'000

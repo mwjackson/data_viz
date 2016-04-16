@@ -12,7 +12,7 @@ void setup()
 {
   preprocessData();
 
-  size(2000, 2000);  // Set up the sketch area 
+  size(1500, 1500);  // Set up the sketch area 
 
   cTable = ColourTable.getPresetColourTable(ColourTable.REDS, 0, 1);// what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
   //cTable = new ColourTable(); // create new colour bar
@@ -24,10 +24,11 @@ void setup()
 
 void draw()
 {
-  chart(0, 0, PayTable);
-  chart(500, 0, PayTable);
-  /*
-  chart(0, 500, PayTable);
-  chart(500, 500, PayTable);
-  */
+  // No drawing yet, just a white background.
+  background(224);
+  
+  chart("chart 1", 0, 0, PayTable);
+  chart("chart 2", 500, 0, PayTable);
+  chart("chart 3", 0, 500, PayTable);
+  chart("chart 4", 500, 500, PayTable);
 }
