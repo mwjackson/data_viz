@@ -6,10 +6,10 @@ void preprocessData() {
   saveTable(PayTable, "PayTable.html");
 
   //max and min of the annual salary for male
-  maleMin =MAX_FLOAT;
-  maleMax =MIN_FLOAT;
-  femaleMin =MAX_FLOAT;
-  femaleMax =MIN_FLOAT;
+  maleMin = MAX_FLOAT;
+  maleMax = MIN_FLOAT;
+  femaleMin = MAX_FLOAT;
+  femaleMax = MIN_FLOAT;
 
   // Find the minimum and maximum values for both male and female for an occupation - need this for each.
   for (int row=0; row<PayTable.getRowCount(); row++) // male
