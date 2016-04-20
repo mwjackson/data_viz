@@ -1,4 +1,4 @@
-import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   // For colour tables. //<>//
+import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   // For colour tables. //<>// //<>//
 
 //test looking at managers, directors and senior officials for male and female and age banding
 
@@ -22,17 +22,42 @@ void setup()
   smooth();
 }
 
+int page = 1;
 void draw()
 {
-  // No drawing yet, just a white background.
-  background(224);
+  if (page == 1) {
+    pageOverview();
+  } else if (page == 2) {
+    pageAdmin();
+  }
+}
+
+void pageOverview() {
+  background(225);
 
   title();
-
   chart("ALL OCCUPATIONS", 100, 0, PayTable);
   chart("Administrative and secretarial occupations", 550, 0, PayTable);
   chart("Associate professional and technical occupations", 100, 600, PayTable);
   chart("Caring, leisure and other service occupations", 550, 600, PayTable);
+}
+
+void pageAdmin() {
+  background(225);
+
+  title();
+  chart("Administrative and secretarial occupations", 100, 0, PayTable);
+  chart("Administrative occupations", 550, 0, PayTable);
+  chart("Secretarial and related occupations", 100, 600, PayTable);
+}
+
+void keyPressed()
+{
+  if (key=='1') {
+    page = 1;
+  } else if (key =='2') {
+    page = 2;
+  }
 }
 
 
@@ -42,7 +67,7 @@ void draw()
  
  - preprocess data 
  - remove n/as
-  //<>//
+ 
  - page title
  - chart title
  - selectable occupation list in box
