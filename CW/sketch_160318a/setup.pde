@@ -1,11 +1,11 @@
 void preprocessData() {
-  PayTable =loadTable("test.csv", "header,csv");
+  PayTable = loadTable("test.csv", "header,csv");
 
   // As a first step, saving a web page of the table allows us to
   // be assured we have read the data correctly into our sketch.
   saveTable(PayTable, "PayTable.html");
 
-  //max and min of the annual salary for male
+  //max and min of the annual salary for PayMale
   maleMin = MAX_FLOAT;
   maleMax = MIN_FLOAT;
   femaleMin = MAX_FLOAT;
