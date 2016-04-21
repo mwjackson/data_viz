@@ -3,13 +3,43 @@ void title() { //<>//
   // TODO: key
   fill(200);
 
-  rect(20, 20, 900, 100);
-  rect(920, 20, 1200, 100);
+  // title
+  rect(20, 20, 600, 100);
+  // key
+  rect(620, 20, 1440, 100);
 
   fill(120);
   textAlign(CENTER);
   textSize(20);
   text("GENDER GAP IN INDUSTRY", 200, 65);
+  
+  key_buttons(20, 620, new String[] {"Admin", "Assoc Prof", "Caring, Leisure...", "Elementary...", "Managers, Directors..."});
+  key_buttons(60, 620, new String[] {"Process, plant...", "Professional Occ...", "Sales & Customer...", "Skilled Trades...", ""});
+}
+
+void key_buttons(int top, int left, String[] labels) {
+  int wid = 150;
+  int heig = 20;
+  int marg = 10;
+  
+  fill(255, 0, 0);
+  rect(left + marg + (wid + marg) * 0, top + marg, left + marg + wid + (marg + wid) * 0, top + marg + heig);
+  
+  fill(120);
+  textAlign(CENTER);
+  text(labels[0], top + marg, left + marg);
+  
+  fill(0, 255, 0);
+  rect(left + marg + (wid + marg) * 1, top + marg, left + marg + wid + (marg + wid) * 1, top + marg + heig);
+  
+  fill(0, 0, 255);  
+  rect(left + marg + (wid + marg) * 2, top + marg, left + marg + wid + (marg + wid) * 2, top + marg + heig);
+  
+  fill(255, 0, 255);  
+  rect(left + marg + (wid + marg) * 3, top + marg, left + marg + wid + (marg + wid) * 3, top + marg + heig);
+  
+  fill(0, 255, 255);  
+  rect(left + marg + (wid + marg) * 4, top + marg, left + marg + wid + (marg + wid) * 4, top + marg + heig);
 }
 
 
