@@ -11,8 +11,8 @@ void title() { //<>//
   fill(120);
   textAlign(CENTER);
   textSize(20);
-  text("GENDER GAP IN INDUSTRY", 200, 65);
-  
+  text("THE GENDER GAP IN INDUSTRY", 200, 65);
+
   key_buttons(20, 620, new String[] {"Admin", "Assoc Prof", "Caring, Leisure...", "Elementary...", "Managers, Directors..."});
   key_buttons(60, 620, new String[] {"Process, plant...", "Professional Occ...", "Sales & Customer...", "Skilled Trades...", ""});
 }
@@ -21,25 +21,28 @@ void key_buttons(int top, int left, String[] labels) {
   int wid = 150;
   int heig = 20;
   int marg = 10;
-  
-  fill(255, 0, 0);
+
+  fill(105,210,231);
   rect(left + marg + (wid + marg) * 0, top + marg, left + marg + wid + (marg + wid) * 0, top + marg + heig);
-  
-  fill(120);
-  textAlign(CENTER);
-  text(labels[0], top + marg, left + marg);
-  
-  fill(0, 255, 0);
+
+  fill(167,219,216);
   rect(left + marg + (wid + marg) * 1, top + marg, left + marg + wid + (marg + wid) * 1, top + marg + heig);
-  
-  fill(0, 0, 255);  
+
+  fill(224,228,204);  
   rect(left + marg + (wid + marg) * 2, top + marg, left + marg + wid + (marg + wid) * 2, top + marg + heig);
-  
-  fill(255, 0, 255);  
+
+  fill(243,134,48);  
   rect(left + marg + (wid + marg) * 3, top + marg, left + marg + wid + (marg + wid) * 3, top + marg + heig);
-  
-  fill(0, 255, 255);  
+
+  fill(250,105,0);  
   rect(left + marg + (wid + marg) * 4, top + marg, left + marg + wid + (marg + wid) * 4, top + marg + heig);
+
+  for (int i=0; i < 5; i++) {
+    fill(0, 0, 0);
+    textAlign(LEFT, TOP);
+    textSize(12);
+    text(labels[i], left + marg + 5 + (wid + marg) * i, top + marg + 2);
+  }
 }
 
 
@@ -56,7 +59,6 @@ void chart(String name, float top, float left, Table data) {
   float chartTop = top + margin;
   float chartBottom = top + graphHeight - margin;
 
-  //println("name: " + name + " chartLeft: " + chartLeft + " chartRight: " + chartRight + " chartTop: " + chartTop + " chartBottom: " + chartBottom);
   System.out.printf("name: %s \nchartLeft: %f chartRight: %f chartTop: %f chartBottom: %f\n", name, chartLeft, chartRight, chartTop, chartBottom); 
 
   fill(120);
@@ -74,7 +76,7 @@ void chart(String name, float top, float left, Table data) {
     float malesalaryPos = map(maleSalary, dataMin, 50, chartLeft, chartRight);
     float femalesalaryPos = map(femaleSalary, dataMin, 50, chartLeft, chartRight);
     float percentdiff = (maleSalary - femaleSalary) / maleSalary;
-    
+
     float agePos = map(ageIndex, 1, 6, chartTop, chartBottom);
 
     fill(128);
