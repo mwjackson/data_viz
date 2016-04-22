@@ -22,22 +22,10 @@ void key_buttons(int top, int left, String[] labels) {
   int heig = 20;
   int marg = 10;
 
-  fill(105,210,231);
-  rect(left + marg + (wid + marg) * 0, top + marg, left + marg + wid + (marg + wid) * 0, top + marg + heig);
-
-  fill(167,219,216);
-  rect(left + marg + (wid + marg) * 1, top + marg, left + marg + wid + (marg + wid) * 1, top + marg + heig);
-
-  fill(224,228,204);  
-  rect(left + marg + (wid + marg) * 2, top + marg, left + marg + wid + (marg + wid) * 2, top + marg + heig);
-
-  fill(243,134,48);  
-  rect(left + marg + (wid + marg) * 3, top + marg, left + marg + wid + (marg + wid) * 3, top + marg + heig);
-
-  fill(250,105,0);  
-  rect(left + marg + (wid + marg) * 4, top + marg, left + marg + wid + (marg + wid) * 4, top + marg + heig);
-
   for (int i=0; i < 5; i++) {
+    fill(PALETTE[i]);
+    rect(left + marg + (wid + marg) * i, top + marg, left + marg + wid + (marg + wid) * i, top + marg + heig);
+
     fill(0, 0, 0);
     textAlign(LEFT, TOP);
     textSize(12);
