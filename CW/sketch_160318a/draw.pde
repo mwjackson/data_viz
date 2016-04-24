@@ -1,40 +1,4 @@
-void title() { //<>//
-  // sketch title
-  // TODO: key
-  fill(200);
-
-  // title
-  rect(20, 20, 600, 100);
-  // key
-  rect(620, 20, 1440, 100);
-
-  fill(120);
-  textAlign(CENTER);
-  textSize(20);
-  text("THE GENDER GAP IN INDUSTRY", 200, 65);
-
-  key_buttons(20, 620, new String[] {"Admin", "Assoc Prof", "Caring, Leisure...", "Elementary...", "Managers, Directors..."});
-  key_buttons(60, 620, new String[] {"Process, plant...", "Professional Occ...", "Sales & Customer...", "Skilled Trades...", ""});
-}
-
-void key_buttons(int top, int left, String[] labels) {
-  int wid = 150;
-  int heig = 20;
-  int marg = 10;
-
-  for (int i=0; i < 5; i++) {
-    fill(PALETTE[i]);
-    rect(left + marg + (wid + marg) * i, top + marg, left + marg + wid + (marg + wid) * i, top + marg + heig);
-
-    fill(0, 0, 0);
-    textAlign(LEFT, TOP);
-    textSize(12);
-    text(labels[i], left + marg + 5 + (wid + marg) * i, top + marg + 2);
-  }
-}
-
-
-void chart(String name, float top, float left, Table data) {
+void drawChart(String name, float top, float left, List<GenderData> data) { //<>//
   float margin = 50;
   float graphWidth = 500;
   float graphHeight = 400;
@@ -55,17 +19,24 @@ void chart(String name, float top, float left, Table data) {
   text(name.toUpperCase(), chartLeft + 200, top + 20);
 
   chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
+  
+  //float dataMin = min(minMale(data), minFemale(data));
+  //float dataMax = max(maxMale(data), maxFemale(data));
+  
+  //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
   int ageIndex = 1;
-  for (TableRow row : data.rows())
+  for (GenderData row : data)
   {
-    float maleSalary = row.getFloat("Male");
-    float femaleSalary = row.getFloat("Female");
-    float malesalaryPos = map(maleSalary, dataMin, 50, chartLeft, chartRight);
-    float femalesalaryPos = map(femaleSalary, dataMin, 50, chartLeft, chartRight);
+    float maleSalary = row.male;
+    float femaleSalary = row.female;
+    float malesalaryPos = map(maleSalary, dataMin, dataMax, chartLeft, chartRight);
+    float femalesalaryPos = map(femaleSalary, dataMin, dataMax, chartLeft, chartRight);
     float percentdiff = (maleSalary - femaleSalary) / maleSalary;
 
     float agePos = map(ageIndex, 1, 6, chartTop, chartBottom);
+    
+    System.out.printf("age: %s male: %f female: %f\n", row.age, row.male, row.female); 
 
     fill(128);
 

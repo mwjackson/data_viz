@@ -1,18 +1,45 @@
 import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   // For colour tables. //<>// //<>//
 
+import controlP5.*;
+
+ControlP5 cp5;
+
 //test looking at managers, directors and senior officials for male and female and age banding
 
 Table PayTable; 
-float maleMin, maleMax, femaleMin, femaleMax;
-float dataMin, dataMax;
 
 ColourTable cTable;   // Will store a Brewer colour table.
 
 color[] PALETTE = {#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900};
 
+float dataMin = 0;
+float dataMax = 50000;
+
+public class Chart {
+  public final String name;
+  public final List<GenderData> data;
+
+  public Chart(String name, List<GenderData> data) {
+    this.name = name;
+    this.data = data;
+  }
+}
+
+public class Button {
+  public final String id;
+  public final String label;
+
+  public Button(String id, String label) {
+    this.id = id;
+    this.label = label;
+  }
+}
+
 void setup()
 {
-  preprocessData();
+  cp5 = new ControlP5(this);
+
+  //preprocessData();
 
   size(1500, 2000);  // Set up the sketch area 
 
@@ -22,6 +49,22 @@ void setup()
   //cTable.addContinuousColourRule(0.5,255,0,0);
 
   smooth();
+
+  key_buttons(20, 620, new Button[] {
+    new Button("overview", "Overview"), 
+    new Button("admin", "Admin"), 
+    new Button("assprof", "Assoc Prof"), 
+    new Button("caring", "Caring, Leisure..."), 
+    new Button("elem", "Elementary..."), 
+    });
+
+  key_buttons(60, 620, new Button[] {
+    new Button("mgrs", "Managers, Directors..."), 
+    new Button("proc", "Process, plant..."), 
+    new Button("prof", "Professional Occ..."), 
+    new Button("sales", "Sales & Customer..."), 
+    new Button("trades", "Skilled Trades..."), 
+    });
 }
 
 int page = 1;
@@ -29,41 +72,51 @@ void draw()
 {
   background(225);
   title();
-  
+
   if (page == 1) {
     pageOverview();
   } else if (page == 2) {
     pageAdmin();
-  }else if (page == 3) {
+  } else if (page == 3) {
     pageAssocProf();
-  }else if (page == 4) {
+  } else if (page == 4) {
     pageAdmin();
-  }else if (page == 5) {
+  } else if (page == 5) {
+    pageAdmin();
+  } else if (page == 6) {
+    pageAdmin();
+  } else if (page == 7) {
+    pageAdmin();
+  } else if (page == 8) {
+    pageAdmin();
+  } else if (page == 9) {
     pageAdmin();
   }
 }
 
 void pageOverview() {
-  chart("ALL OCCUPATIONS",                                   100, 0, PayTable);
-  chart("Associate professional and technical occupations",  100, 600, PayTable);
-  chart("Administrative and secretarial occupations",        550, 0, PayTable);
-  chart("Caring, leisure and other service occupations",     550, 600, PayTable);
+  layoutCharts(new Chart[] { 
+    new Chart("ALL OCCUPATIONS", loadData("data/main_page.csv", "ALL OCCUPATIONS")), 
+    });
 }
 
 void pageAdmin() {
-  chart("Administrative and secretarial occupations", 100, 0, PayTable);
-  chart("Administrative occupations", 550, 0, PayTable);
-  chart("Secretarial and related occupations", 100, 600, PayTable);
+  layoutCharts(new Chart[] { 
+    new Chart("Administrative and secretarial occupations", loadData("data/main_page.csv", "Administrative and secretarial occupations")), 
+    new Chart("Administrative occupations", loadData("data/admin.csv", "Administrative occupations")), 
+    new Chart("Secretarial and related occupations", loadData("data/admin.csv", "Secretarial and related occupations")), 
+    });
 }
 
 void pageAssocProf() {
-  chart("Associate professional and technical occupations", 100, 0, PayTable);
-  chart("Culture, media and sports occupations", 100, 600, PayTable);
-  chart("Business and public service associate professionals", 550, 0, PayTable);
-  chart("Health and social care associate professionals", 550, 600, PayTable);
-  
-  chart("Protective service occupations", 1000, 0, PayTable);
-  chart("Science, engineering and technology associate professionals", 1000, 600, PayTable);
+  layoutCharts(new Chart[] { 
+    new Chart("Associate professional and technical occupations", loadData("data/main_page.csv", "Associate professional and technical occupations")), 
+    new Chart("Culture, media and sports occupations", loadData("data/assoc_prof_tech.csv", "Culture, media and sports occupations")), 
+    new Chart("Business and public service associate professionals", loadData("data/assoc_prof_tech.csv", "Business and public service associate professionals")), 
+    new Chart("Health and social care associate professionals", loadData("data/assoc_prof_tech.csv", "Health and social care associate professionals")), 
+    new Chart("Protective service occupations", loadData("data/assoc_prof_tech.csv", "Protective service occupations")), 
+    new Chart("Science, engineering and technology associate professionals", loadData("data/assoc_prof_tech.csv", "Science, engineering and technology associate professionals")), 
+    });
 }
 
 void keyPressed()
@@ -86,6 +139,26 @@ void keyPressed()
     page = 8;
   } else if (key =='9') {
     page = 9;
+  }
+}
+
+void layoutCharts(Chart[] charts) {
+  int columnsPerRow = 3;
+  int chartWidth = 500;
+  int chartHeight = 450;
+
+  int currentColumn = 0;
+  int currentRow = 0;
+  for (Chart chart : charts) {
+    int top = 150 + (chartHeight * currentRow);
+    int left = 0 + (chartWidth * currentColumn);
+    drawChart(chart.name, top, left, chart.data);
+
+    currentColumn++;
+    if (currentColumn == columnsPerRow) {
+      currentColumn = 0;
+      currentRow++;
+    }
   }
 }
 
