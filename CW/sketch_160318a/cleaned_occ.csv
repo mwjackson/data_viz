@@ -1,0 +1,210 @@
+Age,Main,Occupation,Male,Female
+18-21,Administrative and secretarial occupations,Administrative and secretarial occupations,13265,12183
+22-29,Administrative and secretarial occupations,Administrative and secretarial occupations,18994,17492
+30-39,Administrative and secretarial occupations,Administrative and secretarial occupations,23127,17595
+40-49,Administrative and secretarial occupations,Administrative and secretarial occupations,25156,17216
+50-59,Administrative and secretarial occupations,Administrative and secretarial occupations,24830,17353
+60+,Administrative and secretarial occupations,Administrative and secretarial occupations,17626,12779
+18-21,Administrative and secretarial occupations,Administrative occupations,13604,12898
+22-29,Administrative and secretarial occupations,Administrative occupations,19393,17943
+30-39,Administrative and secretarial occupations,Administrative occupations,23505,18088
+40-49,Administrative and secretarial occupations,Administrative occupations,25424,17705
+50-59,Administrative and secretarial occupations,Administrative occupations,25280,18006
+60+,Administrative and secretarial occupations,Administrative occupations,18608,13321
+18-21,Administrative and secretarial occupations,Secretarial and related occupations,,
+22-29,Administrative and secretarial occupations,Secretarial and related occupations,15233,15265
+30-39,Administrative and secretarial occupations,Secretarial and related occupations,16266,14973
+40-49,Administrative and secretarial occupations,Secretarial and related occupations,18442,15622
+50-59,Administrative and secretarial occupations,Secretarial and related occupations,,15063
+60+,Administrative and secretarial occupations,Secretarial and related occupations,,12198
+22-29,ALL OCCUPATIONS,ALL OCCUPATIONS,21088,17098
+30-39,ALL OCCUPATIONS,ALL OCCUPATIONS,29085,20369
+40-49,ALL OCCUPATIONS,ALL OCCUPATIONS,32443,18942
+50-59,ALL OCCUPATIONS,ALL OCCUPATIONS,30992,17710
+60+,ALL OCCUPATIONS,ALL OCCUPATIONS,22977,12191
+18-21,Associate professional and technical occupations,Associate professional and technical occupations,,13743
+22-29,Associate professional and technical occupations,Associate professional and technical occupations,26034,23812
+30-39,Associate professional and technical occupations,Associate professional and technical occupations,32965,26690
+40-49,Associate professional and technical occupations,Associate professional and technical occupations,36982,26514
+50-59,Associate professional and technical occupations,Associate professional and technical occupations,36041,24577
+60+,Associate professional and technical occupations,Associate professional and technical occupations,27500,20084
+18-21,Associate professional and technical occupations,Business and public service associate professionals,,15616
+22-29,Associate professional and technical occupations,Business and public service associate professionals,28056,25000
+30-39,Associate professional and technical occupations,Business and public service associate professionals,36006,28526
+40-49,Associate professional and technical occupations,Business and public service associate professionals,40684,28000
+50-59,Associate professional and technical occupations,Business and public service associate professionals,39588,27142
+60+,Associate professional and technical occupations,Business and public service associate professionals,31079,21292
+18-21,Associate professional and technical occupations,"Culture, media and sports occupations",,
+22-29,Associate professional and technical occupations,"Culture, media and sports occupations",19752,19648
+30-39,Associate professional and technical occupations,"Culture, media and sports occupations",27966,23023
+40-49,Associate professional and technical occupations,"Culture, media and sports occupations",28452,
+50-59,Associate professional and technical occupations,"Culture, media and sports occupations",,
+60+,Associate professional and technical occupations,"Culture, media and sports occupations",,
+18-21,Associate professional and technical occupations,Health and social care associate professionals,,
+22-29,Associate professional and technical occupations,Health and social care associate professionals,18995,20020
+30-39,Associate professional and technical occupations,Health and social care associate professionals,26193,21439
+40-49,Associate professional and technical occupations,Health and social care associate professionals,27507,20112
+50-59,Associate professional and technical occupations,Health and social care associate professionals,28261,21923
+60+,Associate professional and technical occupations,Health and social care associate professionals,,19731
+18-21,Associate professional and technical occupations,Protective service occupations,22462,
+22-29,Associate professional and technical occupations,Protective service occupations,30165,29789
+30-39,Associate professional and technical occupations,Protective service occupations,35814,33056
+40-49,Associate professional and technical occupations,Protective service occupations,40093,37029
+50-59,Associate professional and technical occupations,Protective service occupations,38733,31088
+60+,Associate professional and technical occupations,Protective service occupations,27196,24992
+18-21,Associate professional and technical occupations,"Science, engineering and technology associate professionals",,
+22-29,Associate professional and technical occupations,"Science, engineering and technology associate professionals",24167,22089
+30-39,Associate professional and technical occupations,"Science, engineering and technology associate professionals",28840,23820
+40-49,Associate professional and technical occupations,"Science, engineering and technology associate professionals",32344,21320
+50-59,Associate professional and technical occupations,"Science, engineering and technology associate professionals",32089,20658
+60+,Associate professional and technical occupations,"Science, engineering and technology associate professionals",27293,19678
+18-21,"Caring, leisure and other service occupations",Caring personal service occupations,9784,11061
+22-29,"Caring, leisure and other service occupations",Caring personal service occupations,15097,12795
+30-39,"Caring, leisure and other service occupations",Caring personal service occupations,16907,11985
+40-49,"Caring, leisure and other service occupations",Caring personal service occupations,17837,12571
+50-59,"Caring, leisure and other service occupations",Caring personal service occupations,18269,13206
+60+,"Caring, leisure and other service occupations",Caring personal service occupations,14885,11722
+18-21,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",7723,10390
+22-29,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",15305,12748
+30-39,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",17801,11948
+40-49,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",18715,12584
+50-59,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",19137,13185
+60+,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",15118,11442
+18-21,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",,
+22-29,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",15802,12360
+30-39,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",20332,11650
+40-49,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",20627,12733
+50-59,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",21187,12653
+60+,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",15397,9863
+18-21,Elementary occupations,Elementary administration and service occupations,8139,5271
+22-29,Elementary occupations,Elementary administration and service occupations,14706,9862
+30-39,Elementary occupations,Elementary administration and service occupations,17762,7837
+40-49,Elementary occupations,Elementary administration and service occupations,19455,7410
+50-59,Elementary occupations,Elementary administration and service occupations,19148,7819
+60+,Elementary occupations,Elementary administration and service occupations,15501,5669
+18-21,Elementary occupations,Elementary occupations,8916,5479
+22-29,Elementary occupations,Elementary occupations,15451,10259
+30-39,Elementary occupations,Elementary occupations,18038,8312
+40-49,Elementary occupations,Elementary occupations,19784,7754
+50-59,Elementary occupations,Elementary occupations,19419,8204
+60+,Elementary occupations,Elementary occupations,16089,5902
+18-21,Elementary occupations,Elementary trades and related occupations,15059,
+22-29,Elementary occupations,Elementary trades and related occupations,17748,15883
+30-39,Elementary occupations,Elementary trades and related occupations,19087,14728
+40-49,Elementary occupations,Elementary trades and related occupations,20675,14953
+50-59,Elementary occupations,Elementary trades and related occupations,20523,14555
+60+,Elementary occupations,Elementary trades and related occupations,18705,13156
+18-21,"Managers, directors and senior officials",Corporate managers and directors,,13622
+22-29,"Managers, directors and senior officials",Corporate managers and directors,26665,23854
+30-39,"Managers, directors and senior officials",Corporate managers and directors,42691,35640
+40-49,"Managers, directors and senior officials",Corporate managers and directors,49180,37594
+50-59,"Managers, directors and senior officials",Corporate managers and directors,49264,34078
+60+,"Managers, directors and senior officials",Corporate managers and directors,36959,19056
+18-21,"Managers, directors and senior officials","Managers, directors and senior officials",,15277
+22-29,"Managers, directors and senior officials","Managers, directors and senior officials",25063,22086
+30-39,"Managers, directors and senior officials","Managers, directors and senior officials",39640,33120
+40-49,"Managers, directors and senior officials","Managers, directors and senior officials",47212,35241
+50-59,"Managers, directors and senior officials","Managers, directors and senior officials",46590,32002
+60+,"Managers, directors and senior officials","Managers, directors and senior officials",35275,20040
+18-21,"Managers, directors and senior officials",Other managers and proprietors,,16314
+22-29,"Managers, directors and senior officials",Other managers and proprietors,21064,18548
+30-39,"Managers, directors and senior officials",Other managers and proprietors,29308,23570
+40-49,"Managers, directors and senior officials",Other managers and proprietors,35662,27821
+50-59,"Managers, directors and senior officials",Other managers and proprietors,33061,27693
+60+,"Managers, directors and senior officials",Other managers and proprietors,25930,
+18-21,"Process, plant and machine operatives","Process, plant and machine operatives",15137,13210
+18-21,"Process, plant and machine operatives","Process, plant and machine operatives",15152,13247
+22-29,"Process, plant and machine operatives","Process, plant and machine operatives",20653,16315
+22-29,"Process, plant and machine operatives","Process, plant and machine operatives",20766,16360
+30-39,"Process, plant and machine operatives","Process, plant and machine operatives",23567,15878
+30-39,"Process, plant and machine operatives","Process, plant and machine operatives",23152,16045
+40-49,"Process, plant and machine operatives","Process, plant and machine operatives",25462,16003
+40-49,"Process, plant and machine operatives","Process, plant and machine operatives",25068,15949
+50-59,"Process, plant and machine operatives","Process, plant and machine operatives",24270,15995
+50-59,"Process, plant and machine operatives","Process, plant and machine operatives",24242,15866
+60+,"Process, plant and machine operatives","Process, plant and machine operatives",19521,13672
+60+,"Process, plant and machine operatives","Process, plant and machine operatives",20392,13792
+18-21,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,,12120
+22-29,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,20494,
+30-39,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,23902,
+40-49,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,25680,16018
+50-59,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,24307,19115
+60+,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,18643,
+18-21,Professional occupations,"Business, media and public service professionals",16278,
+22-29,Professional occupations,"Business, media and public service professionals",30903,28512
+30-39,Professional occupations,"Business, media and public service professionals",38093,33245
+40-49,Professional occupations,"Business, media and public service professionals",42260,33108
+50-59,Professional occupations,"Business, media and public service professionals",40064,32576
+60+,Professional occupations,"Business, media and public service professionals",32437,22929
+18-21,Professional occupations,Health professionals,,
+22-29,Professional occupations,Health professionals,26929,26480
+30-39,Professional occupations,Health professionals,35801,27423
+40-49,Professional occupations,Health professionals,41066,28994
+50-59,Professional occupations,Health professionals,40964,29116
+60+,Professional occupations,Health professionals,36720,21041
+18-21,Professional occupations,Professional occupations,16233,11958
+22-29,Professional occupations,Professional occupations,29201,26848
+30-39,Professional occupations,Professional occupations,38418,30602
+40-49,Professional occupations,Professional occupations,42786,31648
+50-59,Professional occupations,Professional occupations,41422,32335
+60+,Professional occupations,Professional occupations,34547,22405
+18-21,Professional occupations,"Science, research, engineering and technology professionals",,
+22-29,Professional occupations,"Science, research, engineering and technology professionals",29624,28340
+30-39,Professional occupations,"Science, research, engineering and technology professionals",40000,33026
+40-49,Professional occupations,"Science, research, engineering and technology professionals",44000,36071
+50-59,Professional occupations,"Science, research, engineering and technology professionals",42694,36969
+60+,Professional occupations,"Science, research, engineering and technology professionals",38615,
+18-21,Professional occupations,Teaching and educational professionals,,
+22-29,Professional occupations,Teaching and educational professionals,27475,26293
+30-39,Professional occupations,Teaching and educational professionals,37209,31985
+40-49,Professional occupations,Teaching and educational professionals,41576,33520
+50-59,Professional occupations,Teaching and educational professionals,41130,35426
+60+,Professional occupations,Teaching and educational professionals,27595,22846
+18-21,Sales and customer service occupations,Customer service occupations,,8515
+22-29,Sales and customer service occupations,Customer service occupations,17278,16021
+30-39,Sales and customer service occupations,Customer service occupations,21157,16693
+40-49,Sales and customer service occupations,Customer service occupations,22084,17880
+50-59,Sales and customer service occupations,Customer service occupations,21925,16930
+60+,Sales and customer service occupations,Customer service occupations,14770,12517
+18-21,Sales and customer service occupations,Sales and customer service occupations,7057,5834
+22-29,Sales and customer service occupations,Sales and customer service occupations,14534,11655
+30-39,Sales and customer service occupations,Sales and customer service occupations,17715,11149
+40-49,Sales and customer service occupations,Sales and customer service occupations,18472,11325
+50-59,Sales and customer service occupations,Sales and customer service occupations,17657,10541
+60+,Sales and customer service occupations,Sales and customer service occupations,11993,7648
+18-21,Sales and customer service occupations,Sales occupations,6905,5607
+22-29,Sales and customer service occupations,Sales occupations,13584,10140
+30-39,Sales and customer service occupations,Sales occupations,16144,9110
+40-49,Sales and customer service occupations,Sales occupations,16620,10052
+50-59,Sales and customer service occupations,Sales occupations,16090,9666
+60+,Sales and customer service occupations,Sales occupations,11469,7270
+18-21,Skilled trades occupations,Skilled agricultural and related trades,14055,
+22-29,Skilled trades occupations,Skilled agricultural and related trades,17721,
+30-39,Skilled trades occupations,Skilled agricultural and related trades,19000,14415
+40-49,Skilled trades occupations,Skilled agricultural and related trades,20076,19471
+50-59,Skilled trades occupations,Skilled agricultural and related trades,18703,
+60+,Skilled trades occupations,Skilled agricultural and related trades,15895,
+18-21,Skilled trades occupations,Skilled construction and building trades,13423,
+22-29,Skilled trades occupations,Skilled construction and building trades,23275,21022
+30-39,Skilled trades occupations,Skilled construction and building trades,26072,
+40-49,Skilled trades occupations,Skilled construction and building trades,27110,
+50-59,Skilled trades occupations,Skilled construction and building trades,27370,
+60+,Skilled trades occupations,Skilled construction and building trades,24412,
+18-21,Skilled trades occupations,"Skilled metal, electrical and electronic trades",16674,
+22-29,Skilled trades occupations,"Skilled metal, electrical and electronic trades",25741,18743
+30-39,Skilled trades occupations,"Skilled metal, electrical and electronic trades",28963,27069
+40-49,Skilled trades occupations,"Skilled metal, electrical and electronic trades",30000,
+50-59,Skilled trades occupations,"Skilled metal, electrical and electronic trades",30369,26982
+60+,Skilled trades occupations,"Skilled metal, electrical and electronic trades",27519,14362
+18-21,Skilled trades occupations,Skilled trades occupations,15891,
+22-29,Skilled trades occupations,Skilled trades occupations,22559,15604
+30-39,Skilled trades occupations,Skilled trades occupations,25439,16784
+40-49,Skilled trades occupations,Skilled trades occupations,27300,13777
+50-59,Skilled trades occupations,Skilled trades occupations,27973,14722
+60+,Skilled trades occupations,Skilled trades occupations,24569,13163
+18-21,Skilled trades occupations,"Textiles, printing and other skilled trades",14388,
+22-29,Skilled trades occupations,"Textiles, printing and other skilled trades",17564,15293
+30-39,Skilled trades occupations,"Textiles, printing and other skilled trades",20277,15231
+40-49,Skilled trades occupations,"Textiles, printing and other skilled trades",20760,12438
+50-59,Skilled trades occupations,"Textiles, printing and other skilled trades",20661,14261
+60+,Skilled trades occupations,"Textiles, printing and other skilled trades",18776,12797
