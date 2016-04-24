@@ -51,8 +51,8 @@ void setup()
   smooth();
 
   PFont font = createFont("sans-serif", 12);
-  tooltip = new Tooltip(this, font, 12, 100);
-  tooltip.setIsCurved(false);
+  tooltip = new Tooltip(this, font, 12, 60);
+  tooltip.setIsCurved(true);
   tooltip.setBorderWidth(2);
   tooltip.setBackgroundColour(255);
   tooltip.showPointer(false);
