@@ -72,6 +72,8 @@ void setup()
     new Button("sales", "Sales & Customer..."), 
     new Button("trades", "Skilled Trades..."), 
     });
+    
+  page = "overview";
 }
 
 String page = "overview";
@@ -211,29 +213,6 @@ void layoutCharts(Chart[] charts) {
     }
   }
 }
-
-//void keyPressed()
-//{
-//  if (key=='1') {
-//    page = 1;
-//  } else if (key =='2') {
-//    page = 2;
-//  } else if (key =='3') {
-//    page = 3;
-//  } else if (key =='4') {
-//    page = 4;
-//  } else if (key =='5') {
-//    page = 5;
-//  } else if (key =='6') {
-//    page = 6;
-//  } else if (key =='7') {
-//    page = 7;
-//  } else if (key =='8') {
-//    page = 8;
-//  } else if (key =='9') {
-//    page = 9;
-//  }
-//}
 
 /*
 
