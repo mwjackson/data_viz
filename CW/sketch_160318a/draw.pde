@@ -19,10 +19,10 @@ void drawChart(String name, float top, float left, List<GenderData> data) { //<>
   text(name.toUpperCase(), chartLeft + 200, top + 20);
 
   chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
-  
+
   //float dataMin = min(minMale(data), minFemale(data));
   //float dataMax = max(maxMale(data), maxFemale(data));
-  
+
   //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
   int ageIndex = 1;
@@ -30,12 +30,12 @@ void drawChart(String name, float top, float left, List<GenderData> data) { //<>
   {
     float maleSalary = row.male;
     float femaleSalary = row.female;
-    float malesalaryPos = map(maleSalary, dataMin, dataMax, chartLeft, chartRight);
-    float femalesalaryPos = map(femaleSalary, dataMin, dataMax, chartLeft, chartRight);
+    float malesalaryPos = map(maleSalary, dataMin, dataMax, chartLeft + 10, chartRight - 10);  // add 10px margin
+    float femalesalaryPos = map(femaleSalary, dataMin, dataMax, chartLeft + 10, chartRight - 10); // add 10px margin
     float percentdiff = (maleSalary - femaleSalary) / maleSalary;
 
-    float agePos = map(ageIndex, 1, 6, chartTop, chartBottom);
-    
+    float agePos = map(ageIndex, 1, 6, chartTop + 10, chartBottom - 10); // add 10px margin
+
     System.out.printf("age: %s male: %f female: %f\n", row.age, row.male, row.female); 
 
     fill(128);
@@ -43,8 +43,15 @@ void drawChart(String name, float top, float left, List<GenderData> data) { //<>
     if (maleSalary > 0 && femaleSalary > 0)
     {
       stroke(cTable.findColour(percentdiff)); // larger the percent different the intense it gets - ask Jo can do from black to red? 
-      strokeWeight(5);
+      strokeWeight(8);
       line(femalesalaryPos, agePos, malesalaryPos, agePos);// line
+
+      if (dist(mouseX, mouseY, (femalesalaryPos + malesalaryPos) / 2, agePos) < 20)
+      {
+        tooltip.setText(String.format("%.2f", percentdiff*100) + "%");
+        tooltip.setIsActive(true);
+        tooltip.draw((femalesalaryPos + malesalaryPos) / 2, agePos + 8);
+      }
     }
 
     if (maleSalary>0)
@@ -52,8 +59,6 @@ void drawChart(String name, float top, float left, List<GenderData> data) { //<>
       noStroke(); 
       fill(3, 206, 255); 
       ellipse(malesalaryPos, agePos, 5, 5); //male salary plotted
-
-      //if (dist(mouseX,mouseY,malesalaryPos,agePos) <10
     }
 
     if (femaleSalary>0)
@@ -93,7 +98,7 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
   String[] ages = {"18-21", "22-29", "30-39", "40-49", "50-59", "60+"};
   int[] ageIndex = {1, 2, 3, 4, 5, 6};
   for (int i=0; i<6; i++) { 
-    float agePos = map(ageIndex[i], 1, 6, chartTop, chartBottom);
-    text(ages[i], chartLeft, agePos);
+    float agePos = map(ageIndex[i], 1, 6, chartTop + 10, chartBottom - 10);  // add 10px margin
+    text(ages[i], chartLeft - 20, agePos);
   }
 }
