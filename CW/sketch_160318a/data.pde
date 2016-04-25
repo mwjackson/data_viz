@@ -16,12 +16,10 @@ public class GenderData {
   }
 }
 
-List<GenderData> loadData(String file, String filterOccupationBy) {
+List<GenderData> loadData(String filterMainBy, String filterOccupationBy) {
   List<GenderData> data = new LinkedList<GenderData>();
 
-  Table table = loadTable(file, "header,csv");
-
-  for (TableRow row : table.rows()) {
+  for (TableRow row : all_occ.rows()) {
     // if we have no filter, or it equals the row then return it
     if (filterOccupationBy.equals("") || row.getString("Occupation").equals(filterOccupationBy)) {
       data.add(new GenderData(row.getString("Age"), row.getFloat("Male"), row.getFloat("Female")));

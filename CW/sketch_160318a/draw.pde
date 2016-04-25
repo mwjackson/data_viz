@@ -1,4 +1,24 @@
-void drawChart(String name, float top, float left, List<GenderData> data) { //<>//
+public class Chart { //<>//
+  public final String name;
+  public final List<GenderData> data;
+
+  public Chart(String name, List<GenderData> data) {
+    this.name = name;
+    this.data = data;
+  }
+}
+
+public class Button {
+  public final String id;
+  public final String label;
+
+  public Button(String id, String label) {
+    this.id = id;
+    this.label = label;
+  }
+}
+
+void drawChart(String name, float top, float left, List<GenderData> data) {
   float margin = 50;
   float graphWidth = 500;
   float graphHeight = 400;
@@ -83,13 +103,13 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
   fill(120);
   textAlign(CENTER);
 
-  text("median salary in £'000", chartLeft + 200, bottom);
+  text("median salary in £ per hour", chartLeft + 200, bottom);
   text("Age Group", chartLeft, bottom); //ask Jo how to rotate
 
-  int[] salaries = {0, 10, 20, 30, 40, 50};
+  int[] salaries = {0, 5, 10, 15, 20, 25};
   for (int salary : salaries)
   {
-    float lineX = map(salary, 0, 50, chartLeft, chartRight);
+    float lineX = map(salary, 0, max(salaries), chartLeft, chartRight);
     strokeWeight(1);
     line(lineX, chartTop, lineX, chartBottom); 
     text(salary, lineX, chartBottom + 20);

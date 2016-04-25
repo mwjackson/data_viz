@@ -1,0 +1,211 @@
+Age,Main,Occupation,Code,Jobs_M,Male,Jobs_F,Female
+18-21, ALL OCCUPATIONS,ALL OCCUPATIONS,,581,7.26,665,7
+22-29, ALL OCCUPATIONS,ALL OCCUPATIONS,,2231,10.28,2170,9.85
+30-39, ALL OCCUPATIONS,ALL OCCUPATIONS,,3096,14.06,2748,12.45
+40-49, ALL OCCUPATIONS,ALL OCCUPATIONS,,3223,15.42,3208,11.58
+50-59, ALL OCCUPATIONS,ALL OCCUPATIONS,,2580,14.94,2792,10.86
+60+, ALL OCCUPATIONS,ALL OCCUPATIONS,,1032,12.22,902,9.61
+18-21," Managers, directors and senior officials",Corporate managers and directors,11,4,8.94,x,7.76
+22-29," Managers, directors and senior officials",Corporate managers and directors,11,95,12.92,62,12.25
+30-39," Managers, directors and senior officials",Corporate managers and directors,11,313,21.66,170,20.2
+40-49," Managers, directors and senior officials",Corporate managers and directors,11,497,24.54,202,20.54
+50-59," Managers, directors and senior officials",Corporate managers and directors,11,376,24.71,157,18.92
+60+," Managers, directors and senior officials",Corporate managers and directors,11,132,20,42,14.81
+18-21," Managers, directors and senior officials","Managers, directors and senior officials",1,5,8.94,19,8.52
+22-29," Managers, directors and senior officials","Managers, directors and senior officials",1,123,12.3,87,11.5
+30-39," Managers, directors and senior officials","Managers, directors and senior officials",1,367,19.68,209,18.06
+40-49," Managers, directors and senior officials","Managers, directors and senior officials",1,553,23.46,254,19.12
+50-59," Managers, directors and senior officials","Managers, directors and senior officials",1,426,23.67,205,17.64
+60+," Managers, directors and senior officials","Managers, directors and senior officials",1,151,19.12,58,14.49
+18-21," Managers, directors and senior officials",Other managers and proprietors,12,x,x,x,8.54
+22-29," Managers, directors and senior officials",Other managers and proprietors,12,28,10.37,25,9.93
+30-39," Managers, directors and senior officials",Other managers and proprietors,12,55,13.55,39,13.03
+40-49," Managers, directors and senior officials",Other managers and proprietors,12,56,17.06,52,14.46
+50-59," Managers, directors and senior officials",Other managers and proprietors,12,50,16.86,49,15.03
+60+," Managers, directors and senior officials",Other managers and proprietors,12,19,14,16,12.49
+18-21,Administrative and secretarial occupations,Administrative and secretarial occupations,4,46,7.93,80,7.76
+22-29,Administrative and secretarial occupations,Administrative and secretarial occupations,4,180,9.82,351,9.61
+30-39,Administrative and secretarial occupations,Administrative and secretarial occupations,4,176,11.59,439,10.43
+40-49,Administrative and secretarial occupations,Administrative and secretarial occupations,4,146,12.42,605,10.47
+50-59,Administrative and secretarial occupations,Administrative and secretarial occupations,4,136,12.38,618,10.36
+60+,Administrative and secretarial occupations,Administrative and secretarial occupations,4,71,10.89,240,10
+18-21,Administrative and secretarial occupations,Administrative occupations,41,43,8,64,7.86
+22-29,Administrative and secretarial occupations,Administrative occupations,41,166,9.94,281,9.85
+30-39,Administrative and secretarial occupations,Administrative occupations,41,165,11.76,348,10.61
+40-49,Administrative and secretarial occupations,Administrative occupations,41,138,12.7,457,10.65
+50-59,Administrative and secretarial occupations,Administrative occupations,41,129,12.57,442,10.5
+60+,Administrative and secretarial occupations,Administrative occupations,41,65,11.08,160,10.08
+18-21,Administrative and secretarial occupations,Secretarial and related occupations,42,x,7.32,17,7.41
+22-29,Administrative and secretarial occupations,Secretarial and related occupations,42,15,8.2,70,8.72
+30-39,Administrative and secretarial occupations,Secretarial and related occupations,42,11,9.54,91,9.97
+40-49,Administrative and secretarial occupations,Secretarial and related occupations,42,8,9.96,149,9.95
+50-59,Administrative and secretarial occupations,Secretarial and related occupations,42,7,9.88,177,9.92
+60+,Administrative and secretarial occupations,Secretarial and related occupations,42,6,8.14,80,9.74
+18-21,Associate professional and technical occupations,Associate professional and technical occupations,3,50,9.38,42,8.62
+22-29,Associate professional and technical occupations,Associate professional and technical occupations,3,359,13.1,304,12.58
+30-39,Associate professional and technical occupations,Associate professional and technical occupations,3,573,16.14,427,14.91
+40-49,Associate professional and technical occupations,Associate professional and technical occupations,3,551,17.97,401,14.83
+50-59,Associate professional and technical occupations,Associate professional and technical occupations,3,393,17.87,288,13.71
+60+,Associate professional and technical occupations,Associate professional and technical occupations,3,112,14.96,66,12.7
+18-21,Associate professional and technical occupations,Business and public service associate professionals,35,19,9.15,26,8.62
+22-29,Associate professional and technical occupations,Business and public service associate professionals,35,186,13.97,203,13.02
+30-39,Associate professional and technical occupations,Business and public service associate professionals,35,294,17.59,263,15.73
+40-49,Associate professional and technical occupations,Business and public service associate professionals,35,283,19.62,244,15.52
+50-59,Associate professional and technical occupations,Business and public service associate professionals,35,213,19.6,162,14.85
+60+,Associate professional and technical occupations,Business and public service associate professionals,35,63,16.63,38,12.66
+18-21,Associate professional and technical occupations,"Culture, media and sports occupations",34,9,10.05,x,8.62
+22-29,Associate professional and technical occupations,"Culture, media and sports occupations",34,38,11.24,22,11.97
+30-39,Associate professional and technical occupations,"Culture, media and sports occupations",34,32,14.36,27,13.27
+40-49,Associate professional and technical occupations,"Culture, media and sports occupations",34,27,15.11,20,14.33
+50-59,Associate professional and technical occupations,"Culture, media and sports occupations",34,14,15.53,11,13.44
+60+,Associate professional and technical occupations,"Culture, media and sports occupations",34,6,15.02,x,12.7
+18-21,Associate professional and technical occupations,Health and social care associate professionals,32,x,9.5,x,8.37
+22-29,Associate professional and technical occupations,Health and social care associate professionals,32,14,11.06,31,11.53
+30-39,Associate professional and technical occupations,Health and social care associate professionals,32,31,13.85,58,12.5
+40-49,Associate professional and technical occupations,Health and social care associate professionals,32,28,14.03,63,12.3
+50-59,Associate professional and technical occupations,Health and social care associate professionals,32,22,14.55,68,12.63
+60+,Associate professional and technical occupations,Health and social care associate professionals,32,7,11.47,15,13.22
+18-21,Associate professional and technical occupations,Protective service occupations,33,x,11.37,x,11.84
+22-29,Associate professional and technical occupations,Protective service occupations,33,30,14.23,14,13.97
+30-39,Associate professional and technical occupations,Protective service occupations,33,90,16.86,39,16.5
+40-49,Associate professional and technical occupations,Protective service occupations,33,103,18.47,34,18.01
+50-59,Associate professional and technical occupations,Protective service occupations,33,47,18.32,12,15.92
+60+,Associate professional and technical occupations,Protective service occupations,33,7,14.65,x,13.52
+18-21,Associate professional and technical occupations,"Science, engineering and technology associate professionals",31,19,8.77,x,7.87
+22-29,Associate professional and technical occupations,"Science, engineering and technology associate professionals",31,92,12.02,35,11.68
+30-39,Associate professional and technical occupations,"Science, engineering and technology associate professionals",31,126,14.23,40,13.25
+40-49,Associate professional and technical occupations,"Science, engineering and technology associate professionals",31,110,15.32,40,12.81
+50-59,Associate professional and technical occupations,"Science, engineering and technology associate professionals",31,98,15.88,35,11.36
+60+,Associate professional and technical occupations,"Science, engineering and technology associate professionals",31,30,14.26,7,12.05
+18-21,"Caring, leisure and other service occupations",Caring personal service occupations,61,24,7.48,116,7.19
+22-29,"Caring, leisure and other service occupations",Caring personal service occupations,61,64,8.37,316,8
+30-39,"Caring, leisure and other service occupations",Caring personal service occupations,61,62,8.99,345,8.51
+40-49,"Caring, leisure and other service occupations",Caring personal service occupations,61,63,9.26,477,8.64
+50-59,"Caring, leisure and other service occupations",Caring personal service occupations,61,55,9.57,390,8.99
+60+,"Caring, leisure and other service occupations",Caring personal service occupations,61,26,8.87,118,8.94
+18-21,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",6,42,7.18,141,7.11
+22-29,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",6,90,8.4,374,7.97
+30-39,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",6,87,9.18,394,8.5
+40-49,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",6,90,9.53,530,8.63
+50-59,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",6,93,9.91,435,8.98
+60+,"Caring, leisure and other service occupations","Caring, leisure and other service occupations",6,47,8.94,137,8.82
+18-21,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",62,17,6.95,26,6.95
+22-29,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",62,26,8.44,58,7.7
+30-39,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",62,26,9.7,49,8.31
+40-49,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",62,28,10.23,53,8.5
+50-59,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",62,38,10.5,46,8.58
+60+,"Caring, leisure and other service occupations","Leisure, travel and related personal service occupations",62,22,9.18,19,8.01
+18-21,Elementary occupations,Elementary administration and service occupations,92,170,6.7,171,6.5
+22-29,Elementary occupations,Elementary administration and service occupations,92,279,7.49,206,7
+30-39,Elementary occupations,Elementary administration and service occupations,92,264,8.35,209,7.19
+40-49,Elementary occupations,Elementary administration and service occupations,92,239,8.89,291,7.26
+50-59,Elementary occupations,Elementary administration and service occupations,92,209,9,267,7.3
+60+,Elementary occupations,Elementary administration and service occupations,92,106,8,120,7.25
+18-21,Elementary occupations,Elementary occupations,9,194,6.75,177,6.5
+22-29,Elementary occupations,Elementary occupations,9,345,7.51,223,7
+30-39,Elementary occupations,Elementary occupations,9,323,8.4,223,7.19
+40-49,Elementary occupations,Elementary occupations,9,297,8.9,312,7.24
+50-59,Elementary occupations,Elementary occupations,9,254,9.03,288,7.3
+60+,Elementary occupations,Elementary occupations,9,128,8.15,126,7.25
+18-21,Elementary occupations,Elementary trades and related occupations,91,24,7,6,6.75
+22-29,Elementary occupations,Elementary trades and related occupations,91,66,7.97,18,7.13
+30-39,Elementary occupations,Elementary trades and related occupations,91,59,8.62,15,7.23
+40-49,Elementary occupations,Elementary trades and related occupations,91,57,8.92,21,7
+50-59,Elementary occupations,Elementary trades and related occupations,91,45,9.17,21,7.38
+60+,Elementary occupations,Elementary trades and related occupations,91,23,8.82,6,7.23
+18-21,"Process, plant and machine operatives","Process, plant and machine operatives",8,29,7.6,7,7.1
+22-29,"Process, plant and machine operatives","Process, plant and machine operatives",8,163,9.05,34,8.04
+30-39,"Process, plant and machine operatives","Process, plant and machine operatives",8,258,10,41,8.02
+40-49,"Process, plant and machine operatives","Process, plant and machine operatives",8,360,10.59,53,8.01
+50-59,"Process, plant and machine operatives","Process, plant and machine operatives",8,322,10.46,54,8.06
+60+,"Process, plant and machine operatives","Process, plant and machine operatives",8,162,9.66,17,7.59
+18-21,"Process, plant and machine operatives","Process, plant and machine operatives_",81,22,7.64,6,7.11
+22-29,"Process, plant and machine operatives","Process, plant and machine operatives_",81,98,9.22,28,8.05
+30-39,"Process, plant and machine operatives","Process, plant and machine operatives_",81,127,10,32,7.95
+40-49,"Process, plant and machine operatives","Process, plant and machine operatives_",81,145,10.96,42,8.01
+50-59,"Process, plant and machine operatives","Process, plant and machine operatives_",81,119,10.99,41,7.95
+60+,"Process, plant and machine operatives","Process, plant and machine operatives_",81,49,10.47,14,7.52
+18-21,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,82,7,7.34,x,6.5
+22-29,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,82,65,8.79,6,7.96
+30-39,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,82,130,10,9,8.9
+40-49,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,82,215,10.4,11,7.99
+50-59,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,82,202,10.26,12,8.96
+60+,"Process, plant and machine operatives",Transport and mobile machine drivers and operatives,82,113,9.29,x,7.88
+18-21,Professional occupations,"Business, media and public service professionals",24,x,8.96,x,10.34
+22-29,Professional occupations,"Business, media and public service professionals",24,119,16.04,106,15.33
+30-39,Professional occupations,"Business, media and public service professionals",24,221,20.36,181,18.95
+40-49,Professional occupations,"Business, media and public service professionals",24,191,22.2,139,19.37
+50-59,Professional occupations,"Business, media and public service professionals",24,147,21.33,95,18.51
+60+,Professional occupations,"Business, media and public service professionals",24,60,19.42,19,17.04
+18-21,Professional occupations,Health professionals,22,x,8.57,7,10.94
+22-29,Professional occupations,Health professionals,22,53,15.21,177,14.34
+30-39,Professional occupations,Health professionals,22,92,20.27,271,17.29
+40-49,Professional occupations,Health professionals,22,100,21.61,319,17.84
+50-59,Professional occupations,Health professionals,22,73,22.15,266,17.88
+60+,Professional occupations,Health professionals,22,21,24.78,60,16.96
+18-21,Professional occupations,Professional occupations,2,20,9.02,13,10.99
+22-29,Professional occupations,Professional occupations,2,392,15.34,480,15.29
+30-39,Professional occupations,Professional occupations,2,752,20.7,768,19.1
+40-49,Professional occupations,Professional occupations,2,701,22.91,768,19.65
+50-59,Professional occupations,Professional occupations,2,516,22.6,591,19.57
+60+,Professional occupations,Professional occupations,2,185,21.1,135,19.04
+18-21,Professional occupations,"Science, research, engineering and technology professionals",21,12,8.95,x,7.97
+22-29,Professional occupations,"Science, research, engineering and technology professionals",21,157,14.72,44,14.37
+30-39,Professional occupations,"Science, research, engineering and technology professionals",21,302,20.21,74,18.42
+40-49,Professional occupations,"Science, research, engineering and technology professionals",21,275,22.47,57,20.37
+50-59,Professional occupations,"Science, research, engineering and technology professionals",21,188,21.73,36,20.93
+60+,Professional occupations,"Science, research, engineering and technology professionals",21,55,20.95,5,18.09
+18-21,Professional occupations,Teaching and educational professionals,23,:,,x,10.71
+22-29,Professional occupations,Teaching and educational professionals,23,63,16.59,153,16.56
+30-39,Professional occupations,Teaching and educational professionals,23,138,22.08,244,21.79
+40-49,Professional occupations,Teaching and educational professionals,23,135,24.67,253,22.37
+50-59,Professional occupations,Teaching and educational professionals,23,109,24.95,195,22.8
+60+,Professional occupations,Teaching and educational professionals,23,49,24.45,52,23.34
+18-21,Sales and customer service occupations,Customer service occupations,72,16,7.29,23,7.33
+22-29,Sales and customer service occupations,Customer service occupations,72,58,8.93,71,8.93
+30-39,Sales and customer service occupations,Customer service occupations,72,47,10.33,67,10.13
+40-49,Sales and customer service occupations,Customer service occupations,72,27,11.34,61,10.36
+50-59,Sales and customer service occupations,Customer service occupations,72,19,11.25,59,10.23
+60+,Sales and customer service occupations,Customer service occupations,72,8,9.83,13,9.11
+18-21,Sales and customer service occupations,Sales and customer service occupations,7,121,7.08,176,6.9
+22-29,Sales and customer service occupations,Sales and customer service occupations,7,230,7.88,280,7.67
+30-39,Sales and customer service occupations,Sales and customer service occupations,7,149,8.93,211,7.91
+40-49,Sales and customer service occupations,Sales and customer service occupations,7,95,9.36,233,7.72
+50-59,Sales and customer service occupations,Sales and customer service occupations,7,69,8.94,254,7.5
+60+,Sales and customer service occupations,Sales and customer service occupations,7,36,8.18,102,7.27
+18-21,Sales and customer service occupations,Sales occupations,71,105,7.01,154,6.8
+22-29,Sales and customer service occupations,Sales occupations,71,173,7.57,210,7.35
+30-39,Sales and customer service occupations,Sales occupations,71,102,8.41,144,7.36
+40-49,Sales and customer service occupations,Sales occupations,71,67,8.59,172,7.35
+50-59,Sales and customer service occupations,Sales occupations,71,51,8.41,195,7.23
+60+,Sales and customer service occupations,Sales occupations,71,27,7.94,89,7.21
+18-21,Skilled trades occupations,Skilled agricultural and related trades,51,5,7.81,:,
+22-29,Skilled trades occupations,Skilled agricultural and related trades,51,20,8.47,x,7.7
+30-39,Skilled trades occupations,Skilled agricultural and related trades,51,19,9.25,..,
+40-49,Skilled trades occupations,Skilled agricultural and related trades,51,25,9.6,x,10.76
+50-59,Skilled trades occupations,Skilled agricultural and related trades,51,21,9.41,x,7.78
+60+,Skilled trades occupations,Skilled agricultural and related trades,51,14,8.91,x,x
+18-21,Skilled trades occupations,Skilled construction and building trades,53,13,8,:,
+22-29,Skilled trades occupations,Skilled construction and building trades,53,58,11,x,7.78
+30-39,Skilled trades occupations,Skilled construction and building trades,53,69,12,x,9.1
+40-49,Skilled trades occupations,Skilled construction and building trades,53,80,12.42,x,x
+50-59,Skilled trades occupations,Skilled construction and building trades,53,61,12.4,x,x
+60+,Skilled trades occupations,Skilled construction and building trades,53,25,11.58,:,
+18-21,Skilled trades occupations,"Skilled metal, electrical and electronic trades",52,38,8.21,x,9.42
+22-29,Skilled trades occupations,"Skilled metal, electrical and electronic trades",52,186,11.67,7,10.56
+30-39,Skilled trades occupations,"Skilled metal, electrical and electronic trades",52,221,13,7,14.99
+40-49,Skilled trades occupations,"Skilled metal, electrical and electronic trades",52,251,13.32,7,10.37
+50-59,Skilled trades occupations,"Skilled metal, electrical and electronic trades",52,240,13.86,6,13.9
+60+,Skilled trades occupations,"Skilled metal, electrical and electronic trades",52,83,13.19,x,7.71
+18-21,Skilled trades occupations,Skilled trades occupations,5,74,7.75,9,7.16
+22-29,Skilled trades occupations,Skilled trades occupations,5,349,10.15,36,8.17
+30-39,Skilled trades occupations,Skilled trades occupations,5,411,11.64,35,8.58
+40-49,Skilled trades occupations,Skilled trades occupations,5,431,12.24,52,8.12
+50-59,Skilled trades occupations,Skilled trades occupations,5,371,12.82,59,8.31
+60+,Skilled trades occupations,Skilled trades occupations,5,141,12,22,8.21
+18-21,Skilled trades occupations,"Textiles, printing and other skilled trades",54,18,6.83,8,7
+22-29,Skilled trades occupations,"Textiles, printing and other skilled trades",54,85,8.01,27,7.93
+30-39,Skilled trades occupations,"Textiles, printing and other skilled trades",54,102,8.81,26,7.98
+40-49,Skilled trades occupations,"Textiles, printing and other skilled trades",54,75,9.28,42,8
+50-59,Skilled trades occupations,"Textiles, printing and other skilled trades",54,48,9.16,50,8.1
+60+,Skilled trades occupations,"Textiles, printing and other skilled trades",54,19,9.34,18,8.29
