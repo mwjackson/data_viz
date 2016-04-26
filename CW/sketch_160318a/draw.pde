@@ -64,7 +64,7 @@ void drawChart(String name, float top, float left, List<GenderData> data) {
   fill(120);
   textAlign(CENTER);
   textSize(12);
-  text(name.toUpperCase(), chartLeft + 200, top + 20);
+  text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
 
   chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
 
@@ -135,7 +135,7 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
   fill(120);
   textAlign(CENTER);
 
-  text("median salary in £ per hour", chartLeft + 200, bottom);
+  text("median salary in £ per hour", centreOfChart(chartLeft, chartRight), bottom);
   text("Age Group", chartLeft, bottom); //ask Jo how to rotate
 
   int[] salaries = {0, 5, 10, 15, 20, 25};
@@ -154,4 +154,8 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
     textAlign(RIGHT);
     text(ages[i], chartLeft - 5, agePos);
   }
+}
+
+float centreOfChart(float left, float right) {
+  return (left + right)/2;
 }
