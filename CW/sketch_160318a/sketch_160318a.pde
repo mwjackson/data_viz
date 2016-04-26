@@ -8,7 +8,8 @@ Table all_occ;
 
 Tooltip tooltip;
 
-ColourTable cTable;   // Will store a Brewer colour table.
+ColourTable colorPositive;   // Will store a Brewer colour table.
+ColourTable colorNegative; 
 
 color[] PALETTE = {#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900};
 
@@ -27,13 +28,15 @@ void setup()
   cp5 = new ControlP5(this);
 
   size(1500, 2000);  // Set up the sketch area 
-  
+
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
-  cTable = ColourTable.getPresetColourTable(ColourTable.REDS, percentMin, percentMax); // what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
-  //cTable = new ColourTable(); // create new colour bar
-  //cTable.addContinuousColourRule(0,0,0,0);
-  //cTable.addContinuousColourRule(0.5,255,0,0);
+  colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax); // what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
+  colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, Math.abs(0.5)); // what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
+
+  //colorPositive = new ColourTable(); // create new colour bar
+  //colorPositive.addContinuousColourRule(0, 0,0,0);
+  //colorPositive.addContinuousColourRule(percentMax, 252, 102, 238);
 
   smooth();
 
@@ -59,7 +62,7 @@ void setup()
     new Button("sales", "Sales & Customer..."), 
     new Button("trades", "Skilled Trades..."), 
     });
-    
+
   page = "overview";
 }
 
@@ -97,8 +100,17 @@ void draw()
 
 void pageOverview() {
   layoutCharts(new Chart[] { 
-    new Chart("ALL OCCUPATIONS", loadData("", "ALL OCCUPATIONS")), 
-    });
+    //new Chart("ALL OCCUPATIONS", loadData("", "ALL OCCUPATIONS")), 
+    new Chart("Administrative and secretarial occupations", loadData("", "Administrative and secretarial occupations")), 
+    new Chart("Associate professional and technical occupations", loadData("", "Associate professional and technical occupations")), 
+    new Chart("Caring, leisure and other service occupations", loadData("", "Caring, leisure and other service occupations")), 
+    new Chart("Elementary occupations", loadData("", "Elementary occupations")), 
+    new Chart("Managers, directors and senior officials", loadData("", "Managers, directors and senior officials")), 
+    new Chart("Process, plant and machine operatives", loadData("", "Process, plant and machine operatives")), 
+    new Chart("Professional occupations", loadData("", "Professional occupations")), 
+    new Chart("Sales and customer service occupations", loadData("", "Sales and customer service occupations")), 
+    new Chart("Skilled trades occupations", loadData("", "Skilled trades occupations")), 
+    }, 400, 300);
 }
 
 void pageAdmin() {
@@ -106,7 +118,7 @@ void pageAdmin() {
     new Chart("Administrative and secretarial occupations", loadData("", "Administrative and secretarial occupations")), 
     new Chart("Administrative occupations", loadData("", "Administrative occupations")), 
     new Chart("Secretarial and related occupations", loadData("", "Secretarial and related occupations")), 
-    });
+    }, 500, 400);
 }
 
 void pageAssocProf() {
@@ -117,7 +129,7 @@ void pageAssocProf() {
     new Chart("Health and social care associate professionals", loadData("", "Health and social care associate professionals")), 
     new Chart("Protective service occupations", loadData("", "Protective service occupations")), 
     new Chart("Science, engineering and technology associate professionals", loadData("", "Science, engineering and technology associate professionals")), 
-    });
+    }, 500, 400);
 }
 
 void pageCaring() {
@@ -125,7 +137,7 @@ void pageCaring() {
     new Chart("Caring, leisure and other service occupations", loadData("", "Caring, leisure and other service occupations")), 
     new Chart("Caring personal service occupations", loadData("", "Caring personal service occupations")), 
     new Chart("Leisure, travel and related personal service occupations", loadData("", "Leisure, travel and related personal service occupations")), 
-    });
+    }, 500, 400);
 }
 
 void pageElem() {
@@ -133,7 +145,7 @@ void pageElem() {
     new Chart("Elementary occupations", loadData("", "Elementary occupations")), 
     new Chart("Elementary administration and service occupations", loadData("", "Elementary administration and service occupations")), 
     new Chart("Elementary trades and related occupations", loadData("", "Elementary trades and related occupations")), 
-    });
+    }, 500, 400);
 }
 
 void pageMgrs() {
@@ -141,7 +153,7 @@ void pageMgrs() {
     new Chart("Managers, directors and senior officials", loadData("", "Managers, directors and senior officials")), 
     new Chart("Corporate managers and directors", loadData("", "Corporate managers and directors")), 
     new Chart("Other managers and proprietors", loadData("", "Other managers and proprietors")), 
-    });
+    }, 500, 400);
 }
 
 void pageProc() {
@@ -149,7 +161,7 @@ void pageProc() {
     new Chart("Process, plant and machine operatives", loadData("", "Process, plant and machine operatives")), 
     new Chart("Process, plant and machine operatives_", loadData("", "Process, plant and machine operatives_")), 
     new Chart("Transport and mobile machine drivers and operatives", loadData("", "Transport and mobile machine drivers and operatives")), 
-    });
+    }, 500, 400);
 }
 
 void pageProf() {
@@ -159,7 +171,7 @@ void pageProf() {
     new Chart("Health professionals", loadData("", "Health professionals")), 
     new Chart("Science, research, engineering and technology professionals", loadData("", "Science, research, engineering and technology professionals")), 
     new Chart("Teaching and educational professionals", loadData("", "Teaching and educational professionals")), 
-    });
+    }, 500, 400);
 }
 
 void pageSales() {
@@ -167,7 +179,7 @@ void pageSales() {
     new Chart("Sales and customer service occupations", loadData("", "Sales and customer service occupations")), 
     new Chart("Customer service occupations", loadData("", "Customer service occupations")), 
     new Chart("Sales occupations", loadData("", "Sales occupations")), 
-    });
+    }, 500, 400);
 }
 
 void pageTrades() {
@@ -177,20 +189,20 @@ void pageTrades() {
     new Chart("Skilled construction and building trades", loadData("", "Skilled construction and building trades")), 
     new Chart("Skilled metal, electrical and electronic trades", loadData("", "Skilled metal, electrical and electronic trades")), 
     new Chart("Textiles, printing and other skilled trades", loadData("", "Textiles, printing and other skilled trades")), 
-    });
+    }, 500, 400);
 }
 
-void layoutCharts(Chart[] charts) {
+void layoutCharts(Chart[] charts, int chartWidth, int chartHeight) {
   int columnsPerRow = 3;
-  int chartWidth = 500;
-  int chartHeight = 450;
+  //int chartWidth = 500;
+  //int chartHeight = 450;
 
   int currentColumn = 0;
   int currentRow = 0;
   for (Chart chart : charts) {
     int top = 150 + (chartHeight * currentRow);
     int left = 0 + (chartWidth * currentColumn);
-    drawChart(chart.name, top, left, chart.data);
+    drawChart(chart.name, top, left, chartWidth, chartHeight, chart.data);
 
     currentColumn++;
     if (currentColumn == columnsPerRow) {
