@@ -1,4 +1,4 @@
- //<>//
+import controlP5.CColor; //<>//
 
 void key_buttons(int top, int left, Button[] buttons) {
   int wid = 150;
@@ -12,7 +12,7 @@ void key_buttons(int top, int left, Button[] buttons) {
       .setPosition(left + marg + (wid + marg) * i, top + marg)
       .setLabel(buttons[i].label)
       .setFont(font)
-      //.setColor(PALETTE[i])
+      .setColor(new CColor(#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900))
       .setSize(150, 20);
   }
 }

@@ -28,10 +28,13 @@ void title() { //<>//
   rect(620, 20, 1440, 100); // menu
 
   // title
-  fill(120);
+  fill(0);
   textAlign(CENTER);
   textSize(20);
-  text("THE GENDER GAP IN INDUSTRY", 200, 65);
+  text("THE GENDER GAP IN INDUSTRY", 200, 60);
+  textSize(12);
+  text("Median hourly pay (£) by age group", 200, 80);
+  
   
   // key
   textAlign(LEFT);
@@ -48,8 +51,6 @@ void title() { //<>//
 
 void drawChart(String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {
   float margin = 50;
-  //float graphWidth = 500;
-  //float graphHeight = 400;
 
   float bottom = top + chartHeight;
 
@@ -61,15 +62,8 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
 
   System.out.printf("name: %s \nchartLeft: %f chartRight: %f chartTop: %f chartBottom: %f\n", name, chartLeft, chartRight, chartTop, chartBottom); 
 
-  fill(120);
-  textAlign(CENTER);
-  textSize(12);
-  text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
 
   chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
-
-  //float dataMin = min(minMale(data), minFemale(data));
-  //float dataMax = max(maxMale(data), maxFemale(data));
 
   //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
@@ -125,6 +119,11 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
 }
 
 void chartArea(String name, float top, float bottom, float chartLeft, float chartRight, float chartTop, float chartBottom) {
+  fill(0);
+  textAlign(CENTER);
+  textSize(12);
+  text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
+
   //show plot area as white box
   fill(255);
   rectMode(CORNERS);
@@ -133,15 +132,16 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
 
   // Draw salary markers £'000
   stroke(180);
-  fill(120);
+  fill(0);
   textAlign(CENTER);
 
-  text("median salary in £ per hour", centreOfChart(chartLeft, chartRight), bottom);
-  text("Age Group", chartLeft, bottom); //ask Jo how to rotate
+  //text("median salary in £ per hour", centreOfChart(chartLeft, chartRight), bottom);
+  //text("Age Group", chartLeft, bottom); //ask Jo how to rotate
 
   int[] salaries = {0, 5, 10, 15, 20, 25};
   for (int salary : salaries)
   {
+    fill(0);
     float lineX = map(salary, 0, max(salaries), chartLeft, chartRight);
     strokeWeight(1);
     line(lineX, chartTop, lineX, chartBottom); 
