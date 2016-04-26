@@ -46,18 +46,18 @@ void title() { //<>//
   ellipse(440, 70, 8, 8); //female salary plotted
 }
 
-void drawChart(String name, float top, float left, List<GenderData> data) {
+void drawChart(String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {
   float margin = 50;
-  float graphWidth = 500;
-  float graphHeight = 400;
+  //float graphWidth = 500;
+  //float graphHeight = 400;
 
-  float bottom = top + graphHeight;
+  float bottom = top + chartHeight;
 
   // Corners of the plotted chart
   float chartLeft = left + margin;
-  float chartRight = left + graphWidth - margin;
+  float chartRight = left + chartWidth - margin;
   float chartTop = top + margin;
-  float chartBottom = top + graphHeight - margin;
+  float chartBottom = top + chartHeight - margin;
 
   System.out.printf("name: %s \nchartLeft: %f chartRight: %f chartTop: %f chartBottom: %f\n", name, chartLeft, chartRight, chartTop, chartBottom); 
 
@@ -92,8 +92,9 @@ void drawChart(String name, float top, float left, List<GenderData> data) {
 
     if (maleSalary > 0 && femaleSalary > 0)
     {
-      stroke(cTable.findColour(percentdiff)); // larger the percent different the intense it gets - ask Jo can do from black to red? 
-      strokeWeight(8);
+      int c =  percentdiff >= 0 ? colorPositive.findColour(percentdiff) : colorNegative.findColour(Math.abs(percentdiff)); //<>//
+      stroke(c); // larger the percent different the intense it gets - ask Jo can do from black to red? 
+      strokeWeight(5);
       line(femalesalaryPos, agePos, malesalaryPos, agePos);// line
 
       if (dist(mouseX, mouseY, (femalesalaryPos + malesalaryPos) / 2, agePos) < 20)
