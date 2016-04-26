@@ -1,4 +1,6 @@
-public class Chart { //<>//
+import java.util.*; //<>//
+
+public class Chart {
   public final String name;
   public final List<GenderData> data;
 
@@ -16,6 +18,32 @@ public class Button {
     this.id = id;
     this.label = label;
   }
+}
+
+void title() { //<>//
+  fill(200);
+
+  rect(20, 20, 400, 100); // title
+  rect(420, 20, 600, 100); // key
+  rect(620, 20, 1440, 100); // menu
+
+  // title
+  fill(120);
+  textAlign(CENTER);
+  textSize(20);
+  text("THE GENDER GAP IN INDUSTRY", 200, 65);
+  
+  // key
+  textAlign(LEFT);
+  textSize(12);
+  text("Male", 450, 45);
+  text("Female", 450, 75);
+  noStroke(); 
+  fill(3, 206, 255); 
+  ellipse(440, 40, 8, 8); //male salary plotted
+  noStroke(); 
+  fill(132, 255, 3); 
+  ellipse(440, 70, 8, 8); //female salary plotted
 }
 
 void drawChart(String name, float top, float left, List<GenderData> data) {
@@ -45,6 +73,8 @@ void drawChart(String name, float top, float left, List<GenderData> data) {
 
   //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
+  Collections.reverse(data);  // reverse order for display
+  
   int ageIndex = 1;
   for (GenderData row : data)
   {
@@ -68,24 +98,26 @@ void drawChart(String name, float top, float left, List<GenderData> data) {
 
       if (dist(mouseX, mouseY, (femalesalaryPos + malesalaryPos) / 2, agePos) < 20)
       {
-        tooltip.setText(String.format("%.2f", percentdiff*100) + "%");
+        //tooltip.setText(String.format("%.2f %%\nMale: %.2f Female: %.2f", percentdiff*100, maleSalary, femaleSalary) );
+        tooltip.setText(String.format("%.2f %%", percentdiff*100));
         tooltip.setIsActive(true);
-        tooltip.draw((femalesalaryPos + malesalaryPos) / 2, agePos + 8);
+        tooltip.draw(((femalesalaryPos + malesalaryPos) / 2) + 40, agePos + 8);
       }
     }
 
+    int dotSize = 10;
     if (maleSalary>0)
     {
       noStroke(); 
       fill(3, 206, 255); 
-      ellipse(malesalaryPos, agePos, 5, 5); //male salary plotted
+      ellipse(malesalaryPos, agePos,dotSize, dotSize); //male salary plotted
     }
 
     if (femaleSalary>0)
     {
       noStroke(); 
       fill(132, 255, 3); 
-      ellipse(femalesalaryPos, agePos, 5, 5); //female salary plotted
+      ellipse(femalesalaryPos, agePos, dotSize, dotSize); //female salary plotted
     }
     ageIndex++;
   }
@@ -115,10 +147,11 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
     text(salary, lineX, chartBottom + 20);
   }
 
-  String[] ages = {"18-21", "22-29", "30-39", "40-49", "50-59", "60+"};
+  String[] ages = {"60+", "50-59", "40-49", "30-39", "22-29", "18-21" };
   int[] ageIndex = {1, 2, 3, 4, 5, 6};
   for (int i=0; i<6; i++) { 
     float agePos = map(ageIndex[i], 1, 6, chartTop + 10, chartBottom - 10);  // add 10px margin
-    text(ages[i], chartLeft - 20, agePos);
+    textAlign(RIGHT);
+    text(ages[i], chartLeft - 5, agePos);
   }
 }

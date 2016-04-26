@@ -4,8 +4,6 @@ import controlP5.ControlP5;
 
 ControlP5 cp5;
 
-//test looking at managers, directors and senior officials for male and female and age banding
-
 Table all_occ; 
 
 Tooltip tooltip;
@@ -17,24 +15,29 @@ color[] PALETTE = {#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900};
 float dataMin = 0;
 float dataMax = 25;
 
+float percentMin = -0.3;
+float percentMax = 0.5;
+
 String page = "overview";
+PFont font;
 
 void setup()
 {
+  font = createFont("sans-serif", 12);
   cp5 = new ControlP5(this);
 
   size(1500, 2000);  // Set up the sketch area 
   
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
-  cTable = ColourTable.getPresetColourTable(ColourTable.REDS, 0, 1);// what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
+  cTable = ColourTable.getPresetColourTable(ColourTable.REDS, percentMin, percentMax); // what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
   //cTable = new ColourTable(); // create new colour bar
   //cTable.addContinuousColourRule(0,0,0,0);
   //cTable.addContinuousColourRule(0.5,255,0,0);
 
   smooth();
 
-  PFont font = createFont("sans-serif", 12);
+
   tooltip = new Tooltip(this, font, 12, 60);
   tooltip.setIsCurved(true);
   tooltip.setBorderWidth(2);
@@ -62,7 +65,7 @@ void setup()
 
 void draw()
 {
-  background(225);
+  background(225); 
   title();
 
   tooltip.setIsActive(false);

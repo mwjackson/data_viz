@@ -1,16 +1,4 @@
-void title() { //<>// //<>//
-  fill(200);
-
-  // title
-  rect(20, 20, 600, 100);
-  // key
-  rect(620, 20, 1440, 100);
-
-  fill(120);
-  textAlign(CENTER);
-  textSize(20);
-  text("THE GENDER GAP IN INDUSTRY", 200, 65);
-}
+ //<>//
 
 void key_buttons(int top, int left, Button[] buttons) {
   int wid = 150;
@@ -23,6 +11,7 @@ void key_buttons(int top, int left, Button[] buttons) {
       .setValue(0)
       .setPosition(left + marg + (wid + marg) * i, top + marg)
       .setLabel(buttons[i].label)
+      .setFont(font)
       //.setColor(PALETTE[i])
       .setSize(150, 20);
   }
