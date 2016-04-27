@@ -35,18 +35,29 @@ void title() { //<>//
   textSize(12);
   text("Median hourly pay (£) by age group", 200, 80);
   
-  
   // key
   textAlign(LEFT);
   textSize(12);
   text("Male", 450, 45);
-  text("Female", 450, 75);
+  text("Female", 450, 67);
   noStroke(); 
   fill(3, 206, 255); 
   ellipse(440, 40, 8, 8); //male salary plotted
   noStroke(); 
   fill(132, 255, 3); 
-  ellipse(440, 70, 8, 8); //female salary plotted
+  ellipse(440, 62, 8, 8); //female salary plotted
+  
+  for (float i=0; i<percentMax; i+=0.01)   {
+    fill(colorNegative.findColour(percentMax - i));  // reverse order
+    stroke(colorNegative.findColour(percentMax - i));
+    rect(440 + (100*i), 80, 440 + (100*i), 85);
+  }
+  
+  for (float i=0; i<percentMax; i+=0.01)   {
+    fill(colorPositive.findColour(i));
+    stroke(colorPositive.findColour(i));
+    rect(495 + (100*i), 80, 495 + (100*i), 85);
+  }
 }
 
 void drawChart(String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {
@@ -61,7 +72,6 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
   float chartBottom = top + chartHeight - margin;
 
   System.out.printf("name: %s \nchartLeft: %f chartRight: %f chartTop: %f chartBottom: %f\n", name, chartLeft, chartRight, chartTop, chartBottom); 
-
 
   chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
 

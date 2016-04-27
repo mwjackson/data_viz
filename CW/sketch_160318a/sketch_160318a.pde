@@ -31,15 +31,14 @@ void setup()
 
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
-  colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax); // what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
-  colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, Math.abs(0.5)); // what happens if we get a negative difference? i.e. women earn more than men?  What would the colour be?
+  colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax);
+  colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, percentMax); // set negative color intensity to the same scale as positive
 
   //colorPositive = new ColourTable(); // create new colour bar
   //colorPositive.addContinuousColourRule(0, 0,0,0);
   //colorPositive.addContinuousColourRule(percentMax, 252, 102, 238);
 
   smooth();
-
 
   tooltip = new Tooltip(this, font, 12, 60);
   tooltip.setIsCurved(true);
@@ -68,7 +67,7 @@ void setup()
 
 void draw()
 {
-  background(225); 
+  background(255); 
   title();
 
   tooltip.setIsActive(false);

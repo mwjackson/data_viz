@@ -1,4 +1,5 @@
 import controlP5.CColor; //<>//
+import java.lang.*;
 
 void key_buttons(int top, int left, Button[] buttons) {
   int wid = 150;
@@ -10,11 +11,19 @@ void key_buttons(int top, int left, Button[] buttons) {
     cp5.addButton(id)
       .setValue(0)
       .setPosition(left + marg + (wid + marg) * i, top + marg)
-      .setLabel(buttons[i].label)
+      .setLabel(abbreviate(buttons[i].label, 22))
       .setFont(font)
       .setColor(new CColor(#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900))
       .setSize(150, 20);
   }
+}
+
+String abbreviate(String str, int wid) {
+  int cut = wid;
+  if (str.length() <= wid) {
+    return str;
+  }
+  return str.substring(0, wid - 3) + "..."; //<>//
 }
 
 
