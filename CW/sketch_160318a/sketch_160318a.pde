@@ -8,8 +8,7 @@ Table all_occ;
 
 Tooltip tooltip;
 
-ColourTable colorPositive;   // Will store a Brewer colour table.
-ColourTable colorNegative; 
+ColourTable colorPositive, colorNegative, colourTable;   // Will store a Brewer colour table.
 
 color[] PALETTE = {#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900};
 
@@ -25,18 +24,26 @@ PFont font;
 void setup()
 {
   font = createFont("sans-serif", 12);
-  cp5 = new ControlP5(this);
+  cp5 = new ControlP5(this);  
 
   size(1500, 2000);  // Set up the sketch area 
 
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
-  colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax);
-  colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, percentMax); // set negative color intensity to the same scale as positive
+  //colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax);
+  //colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, percentMax); // set negative color intensity to the same scale as positive
+  
+  colourTable = new ColourTable(); // create new colour bar
+  colourTable.addContinuousColourRule(-0.5, 249, 233, 0);
+  colourTable.addContinuousColourRule(0.5, 144, 0, 255);
 
-  //colorPositive = new ColourTable(); // create new colour bar
-  //colorPositive.addContinuousColourRule(0, 0,0,0);
-  //colorPositive.addContinuousColourRule(percentMax, 252, 102, 238);
+  colorPositive = new ColourTable(); // create new colour bar
+  colorPositive.addContinuousColourRule(0, 0,0,0);
+  colorPositive.addContinuousColourRule(percentMax, 144, 0, 255);
+  
+  colorNegative = new ColourTable(); // create new colour bar
+  colorNegative.addContinuousColourRule(0, 0,0,0);
+  colorNegative.addContinuousColourRule(percentMax, 249, 233, 0);
 
   smooth();
 

@@ -47,17 +47,23 @@ void title() { //<>//
   fill(132, 255, 3); 
   ellipse(440, 62, 8, 8); //female salary plotted
   
-  for (float i=0; i<percentMax; i+=0.01)   {
-    fill(colorNegative.findColour(percentMax - i));  // reverse order
-    stroke(colorNegative.findColour(percentMax - i));
-    rect(440 + (100*i), 80, 440 + (100*i), 85);
+  for (float i=-0.5; i<0.5; i+=0.01)   {
+    fill(colourTable.findColour(i)); 
+    stroke(colourTable.findColour(i));
+    rect(450 + (100*i), 110, 450 + (100*i), 120);
   }
   
-  for (float i=0; i<percentMax; i+=0.01)   {
-    fill(colorPositive.findColour(i));
-    stroke(colorPositive.findColour(i));
-    rect(495 + (100*i), 80, 495 + (100*i), 85);
-  }
+  //for (float i=0; i<percentMax; i+=0.01)   {
+  //  fill(colorNegative.findColour(percentMax - i));  // reverse order //<>//
+  //  stroke(colorNegative.findColour(percentMax - i));
+  //  rect(440 + (100*i), 80, 440 + (100*i), 85);
+  //}
+  
+  //for (float i=0; i<percentMax; i+=0.01)   {
+  //  fill(colorPositive.findColour(i));
+  //  stroke(colorPositive.findColour(i));
+  //  rect(495 + (100*i), 80, 495 + (100*i), 85);
+  //}
 }
 
 void drawChart(String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {
