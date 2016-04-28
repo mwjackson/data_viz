@@ -1,12 +1,12 @@
-import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   // For colour tables. //<>// //<>// //<>//
+import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   //<>//
 import org.gicentre.utils.gui.*; // tooltips
-import controlP5.ControlP5;
+import controlP5.ControlP5; // buttons
 
 ControlP5 cp5;
-
-Table all_occ; 
-
 Tooltip tooltip;
+
+// all occupations data
+Table all_occ; 
 
 float dataMin = 0;
 float dataMax = 25;
@@ -14,14 +14,15 @@ float dataMax = 25;
 float percentMin = -0.5;
 float percentMax = 0.5;
 
+// default page is overview
 String page = "overview";
-PFont font, subTitleFont, titleFont;
 
 int windowWidth = 1500;
 int windowHeight = 2000;
 
 void setup()
 {
+  // from?
   font = loadFont("Aller-16.vlw"); 
   titleFont = loadFont("Aller-Bold-20.vlw");
   subTitleFont = loadFont("Aller-16.vlw");
@@ -42,12 +43,14 @@ void setup()
 
   smooth();
 
+  // configure tooltip styling
   tooltip = new Tooltip(this, font, 12, 60);
   tooltip.setIsCurved(true);
   tooltip.setBorderWidth(2);
   tooltip.setBackgroundColour(255);
   tooltip.showPointer(false);
 
+  // create the menu buttons
   key_buttons(20, 620, new Button[] {
     new Button("overview", "Overview"), 
     new Button("admin", "Admin"), 
@@ -64,6 +67,7 @@ void setup()
     new Button("trades", "Skilled Trades..."), 
     });
 
+  // set current page to overview
   page = "overview";
 }
 
@@ -73,8 +77,10 @@ void draw()
   title();
   legend();
 
+  // clean up old tooltips from previous loop
   tooltip.setIsActive(false);
 
+  // draw the page of the "current page" variable
   if (page.equals("overview")) {
     pageOverview();
   } else if (page.equals("admin")) {
@@ -100,6 +106,7 @@ void draw()
   }
 }
 
+// drawing functions for each page
 void pageOverview() {
   layoutCharts(new Chart[] { 
     //new Chart("ALL OCCUPATIONS", loadData("", "ALL OCCUPATIONS")), 

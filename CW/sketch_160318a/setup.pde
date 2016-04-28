@@ -5,8 +5,9 @@ void key_buttons(int top, int left, Button[] buttons) {
   int wid = 150;
   int marg = 10;
 
+  // loop through buttons and create new button
+  // increment position for each one
   for (int i=0; i < 5; i++) {
-
     String id = "btn_" + buttons[i].id;
     cp5.addButton(id)
       .setValue(0)
@@ -18,15 +19,17 @@ void key_buttons(int top, int left, Button[] buttons) {
   }
 }
 
+// helper function to truncate the button text
 String abbreviate(String str, int wid) {
   int cut = wid;
   if (str.length() <= wid) {
     return str;
   }
-  return str.substring(0, wid - 3) + "..."; //<>// //<>//
+  return str.substring(0, wid - 3) + "..."; //<>//
 }
 
-
+// button click handlers
+// update the "current page" variable when each button is clicked
 public void btn_overview(int v) {
   page = "overview";
 }

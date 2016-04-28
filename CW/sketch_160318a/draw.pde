@@ -5,6 +5,8 @@ ColourTable colorNegative;
 
 ColourTable colourTable; 
 
+PFont font, subTitleFont, titleFont;
+
 color header = color(74, 74, 74);
 color legend = color(255, 255, 255, 7);
 
