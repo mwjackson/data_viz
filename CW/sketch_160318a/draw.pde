@@ -1,5 +1,12 @@
 import java.util.*; //<>//
 
+color header = color(74, 74, 74);
+color legend = color(255, 255, 255, 7);
+
+int headerHeight = 105;
+int titleSize = 20;
+int subTitleSize = 16;
+
 public class Chart {
   public final String name;
   public final List<GenderData> data;
@@ -21,19 +28,20 @@ public class Button {
 }
 
 void title() { //<>//
-  fill(200);
-
-  rect(20, 20, 400, 100); // title
-  rect(420, 20, 600, 100); // key
-  rect(620, 20, 1440, 100); // menu
+  fill(header);
+  rect(0, 0, width, headerHeight); // header bg
 
   // title
-  fill(0);
-  textAlign(CENTER);
-  textSize(20);
-  text("THE GENDER GAP IN INDUSTRY", 200, 60);
-  textSize(12);
-  text("Median hourly pay (£) by age group", 200, 80);
+  fill(255);
+  textAlign(LEFT);
+  PFont titleFont = loadFont("Aller-Bold-20.vlw");
+  textFont(titleFont, 20);
+  text("THE GENDER GAP IN INDUSTRY", 250, 47);
+  // sub-title
+  PFont subTitleFont = loadFont("Aller-16.vlw");
+  fill(155);
+  textFont(subTitleFont, subTitleSize);
+  text("Median hourly pay (£) by age group", 250, 70);
   
   // key
   textAlign(LEFT);
@@ -58,6 +66,12 @@ void title() { //<>//
     stroke(colorPositive.findColour(i));
     rect(495 + (100*i), 80, 495 + (100*i), 85);
   }
+}
+
+void legend() {
+  fill(legend);
+  noStroke();
+  rect(0, 0, 200, headerHeight);
 }
 
 void drawChart(String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {

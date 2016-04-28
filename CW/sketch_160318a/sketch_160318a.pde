@@ -21,13 +21,17 @@ float percentMax = 0.5;
 
 String page = "overview";
 PFont font;
+int windowWidth = 1500;
+int windowHeight = 2000;
 
 void setup()
 {
+  PFont titleFont = loadFont("Aller-Bold-20.vlw"); 
+  
   font = createFont("sans-serif", 12);
   cp5 = new ControlP5(this);
 
-  size(1500, 2000);  // Set up the sketch area 
+  size(2000, 1500);  // Set up the sketch area 
 
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
@@ -69,6 +73,7 @@ void draw()
 {
   background(255); 
   title();
+  legend();
 
   tooltip.setIsActive(false);
 
