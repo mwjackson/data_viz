@@ -1,7 +1,15 @@
-import java.util.*; //<>//
+import java.util.*; //<>// //<>//
+
+ColourTable colorPositive;   // Will store a Brewer colour table.
+ColourTable colorNegative; 
+
+ColourTable colourTable; 
 
 color header = color(74, 74, 74);
 color legend = color(255, 255, 255, 7);
+
+color male = color(144, 0, 255);
+color female = color(249, 233, 0);
 
 int headerHeight = 105;
 int titleSize = 20;
@@ -12,7 +20,7 @@ public class Chart {
   public final List<GenderData> data;
 
   public Chart(String name, List<GenderData> data) {
-    this.name = name;
+    this.name = name; //<>//
     this.data = data;
   }
 }
@@ -34,11 +42,8 @@ void title() { //<>//
   // title
   fill(255);
   textAlign(LEFT);
-  PFont titleFont = loadFont("Aller-Bold-20.vlw");
   textFont(titleFont, 20);
   text("THE GENDER GAP IN INDUSTRY", 250, 47);
-  // sub-title
-  PFont subTitleFont = loadFont("Aller-16.vlw");
   fill(155);
   textFont(subTitleFont, subTitleSize);
   text("Median hourly pay (£) by age group", 250, 70);
@@ -46,26 +51,36 @@ void title() { //<>//
   // key
   textAlign(LEFT);
   textSize(12);
-  text("Male", 450, 45);
-  text("Female", 450, 67);
+  text("Female", 15, 55);
+  text("Male", 145, 55);
   noStroke(); 
-  fill(3, 206, 255); 
-  ellipse(440, 40, 8, 8); //male salary plotted
+  fill(female);  //<>//
+  ellipse(70, 50, 20, 20); //female salary plotted
   noStroke(); 
-  fill(132, 255, 3); 
-  ellipse(440, 62, 8, 8); //female salary plotted
+  fill(male); 
+  ellipse(130, 50, 20, 20); //male salary plotted
   
-  for (float i=0; i<percentMax; i+=0.01)   {
-    fill(colorNegative.findColour(percentMax - i));  // reverse order
-    stroke(colorNegative.findColour(percentMax - i));
-    rect(440 + (100*i), 80, 440 + (100*i), 85);
+  fill(155);
+  text("-40%", 25, 80);
+  text("+40%", 145, 80);
+  
+  for (float i=percentMin; i<percentMax; i+=0.01)   {
+   fill(colourTable.findColour(i));  // reverse order
+   stroke(colourTable.findColour(i));
+   rect(100 + (50*i), 49, 100 + (50*i), 51);
   }
   
-  for (float i=0; i<percentMax; i+=0.01)   {
-    fill(colorPositive.findColour(i));
-    stroke(colorPositive.findColour(i));
-    rect(495 + (100*i), 80, 495 + (100*i), 85);
-  }
+  //for (float i=0; i<percentMax; i+=0.01)   {
+  // fill(colorNegative.findColour(percentMax - i));  // reverse order
+  // stroke(colorNegative.findColour(percentMax - i));
+  // rect(100 + (100*i), 80, 100 + (100*i), 85);
+  //}
+  
+  //for (float i=0; i<percentMax; i+=0.01)   {
+  // fill(colorPositive.findColour(i));
+  // stroke(colorPositive.findColour(i));
+  // rect(150 + (100*i), 80, 150 + (100*i), 85);
+  //}
 }
 
 void legend() {
@@ -87,7 +102,7 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
 
   System.out.printf("name: %s \nchartLeft: %f chartRight: %f chartTop: %f chartBottom: %f\n", name, chartLeft, chartRight, chartTop, chartBottom); 
 
-  chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
+  chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom); //<>//
 
   //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
@@ -110,7 +125,8 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
 
     if (maleSalary > 0 && femaleSalary > 0)
     {
-      int c =  percentdiff >= 0 ? colorPositive.findColour(percentdiff) : colorNegative.findColour(Math.abs(percentdiff)); //<>//
+      //int c =  percentdiff >= 0 ? colorPositive.findColour(percentdiff) : colorNegative.findColour(Math.abs(percentdiff)); //<>//
+      int c = colourTable.findColour(percentdiff);
       stroke(c); // larger the percent different the intense it gets - ask Jo can do from black to red? 
       strokeWeight(5);
       line(femalesalaryPos, agePos, malesalaryPos, agePos);// line
@@ -128,14 +144,14 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
     if (maleSalary>0)
     {
       noStroke(); 
-      fill(3, 206, 255); 
+      fill(male); 
       ellipse(malesalaryPos, agePos,dotSize, dotSize); //male salary plotted
     }
 
     if (femaleSalary>0)
     {
       noStroke(); 
-      fill(132, 255, 3); 
+      fill(female); 
       ellipse(femalesalaryPos, agePos, dotSize, dotSize); //female salary plotted
     }
     ageIndex++;
@@ -149,7 +165,7 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
   text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
 
   //show plot area as white box
-  fill(255);
+  fill(#BCF2FF);
   rectMode(CORNERS);
   noStroke();
   rect(chartLeft, chartTop, chartRight, chartBottom);

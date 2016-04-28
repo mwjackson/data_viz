@@ -1,4 +1,4 @@
-import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   // For colour tables. //<>// //<>//
+import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   // For colour tables. //<>// //<>// //<>//
 import org.gicentre.utils.gui.*; // tooltips
 import controlP5.ControlP5;
 
@@ -8,39 +8,37 @@ Table all_occ;
 
 Tooltip tooltip;
 
-ColourTable colorPositive;   // Will store a Brewer colour table.
-ColourTable colorNegative; 
-
-color[] PALETTE = {#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900};
-
 float dataMin = 0;
 float dataMax = 25;
 
-float percentMin = -0.3;
+float percentMin = -0.5;
 float percentMax = 0.5;
 
 String page = "overview";
-PFont font;
+PFont font, subTitleFont, titleFont;
+
 int windowWidth = 1500;
 int windowHeight = 2000;
 
 void setup()
 {
-  PFont titleFont = loadFont("Aller-Bold-20.vlw"); 
+  font = loadFont("Aller-16.vlw"); 
+  titleFont = loadFont("Aller-Bold-20.vlw");
+  subTitleFont = loadFont("Aller-16.vlw");
   
-  font = createFont("sans-serif", 12);
   cp5 = new ControlP5(this);
 
   size(2000, 1500);  // Set up the sketch area 
 
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
-  colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax);
-  colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, percentMax); // set negative color intensity to the same scale as positive
+  //colorPositive = ColourTable.getPresetColourTable(ColourTable.REDS, 0, percentMax);
+  //colorNegative = ColourTable.getPresetColourTable(ColourTable.BLUES, 0, percentMax); // set negative color intensity to the same scale as positive
 
-  //colorPositive = new ColourTable(); // create new colour bar
-  //colorPositive.addContinuousColourRule(0, 0,0,0);
-  //colorPositive.addContinuousColourRule(percentMax, 252, 102, 238);
+  colourTable = new ColourTable(); // create new colour bar
+  colourTable.addContinuousColourRule(percentMin, female);
+  colourTable.addContinuousColourRule(0, color(255, 255, 255));
+  colourTable.addContinuousColourRule(percentMax, male);
 
   smooth();
 

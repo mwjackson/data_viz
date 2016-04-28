@@ -1,4 +1,4 @@
-import controlP5.CColor; //<>//
+import controlP5.CColor; //<>// //<>//
 import java.lang.*;
 
 void key_buttons(int top, int left, Button[] buttons) {
@@ -13,7 +13,7 @@ void key_buttons(int top, int left, Button[] buttons) {
       .setPosition(left + marg + (wid + marg) * i, top + marg)
       .setLabel(abbreviate(buttons[i].label, 22))
       .setFont(font)
-      .setColor(new CColor(#69D2E7, #A7DBD8, #E0E4CC, #F38630, #FA6900))
+      .setColor(new CColor(header, legend, #FFFFFF, #F38630, #FFFFFF))
       .setSize(150, 20);
   }
 }
@@ -23,7 +23,7 @@ String abbreviate(String str, int wid) {
   if (str.length() <= wid) {
     return str;
   }
-  return str.substring(0, wid - 3) + "..."; //<>//
+  return str.substring(0, wid - 3) + "..."; //<>// //<>//
 }
 
 
