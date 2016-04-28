@@ -1,4 +1,4 @@
-import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   //<>//
+import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   //<>// //<>//
 import org.gicentre.utils.gui.*; // tooltips
 import controlP5.ControlP5; // buttons
 
@@ -17,6 +17,7 @@ float percentMax = 0.5;
 // default page is overview
 String page = "overview";
 
+// matt: comment this
 int windowWidth = 1500;
 int windowHeight = 2000;
 
