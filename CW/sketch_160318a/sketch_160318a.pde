@@ -24,9 +24,9 @@ int windowHeight = 2000;
 void setup()
 {
   // from?
-  font = loadFont("Aller-16.vlw"); 
+  font = loadFont("Aller-14.vlw"); 
   titleFont = loadFont("Aller-Bold-20.vlw");
-  subTitleFont = loadFont("Aller-16.vlw");
+  subTitleFont = loadFont("Aller-14.vlw");
   
   cp5 = new ControlP5(this);
 
