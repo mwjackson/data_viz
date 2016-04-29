@@ -1,4 +1,4 @@
-import java.util.*; //<>// //<>//
+import java.util.*; //<>// //<>// //<>//
 
 ColourTable colorPositive;   // Will store a Brewer colour table.
 ColourTable colorNegative; 
@@ -28,7 +28,7 @@ public class Chart {
   public final List<GenderData> data;
 
   public Chart(String name, List<GenderData> data) {
-    this.name = name; //<>//
+    this.name = name; //<>// //<>//
     this.data = data;
   }
 }
@@ -43,7 +43,7 @@ public class Button {
   }
 }
 
-void title() { //<>//
+void title() { //<>// //<>//
   fill(header);
   rect(0, 0, width, headerHeight); // header bg
 
@@ -57,38 +57,33 @@ void title() { //<>//
   text("Median hourly pay (£) by age group", 250, 70);
   
   // key
+  fill(255);
   textAlign(LEFT);
   textSize(12);
   text("Female", 15, 55);
   text("Male", 145, 55);
-  noStroke(); 
+  noStroke();  //<>//
   fill(female);  //<>//
   ellipse(70, 50, 20, 20); //female salary plotted
   noStroke(); 
   fill(male); 
   ellipse(130, 50, 20, 20); //male salary plotted
   
-  fill(155);
-  text("-40%", 25, 80);
-  text("+40%", 145, 80);
+  fill(255);
+  stroke(155); // larger the percent different the intense it gets - ask Jo can do from black to red? 
+  strokeWeight(1);
+  line(67, 75, 133, 75);
+  line(67, 65, 67, 75);
+  line(133, 65, 133, 75);
+  text("-50%", 25, 80);
+  text("+50%", 145, 80);
+  text("Pay Gap", 80, 90);
   
   for (float i=percentMin; i<percentMax; i+=0.01)   {
    fill(colourTable.findColour(i));  // reverse order
    stroke(colourTable.findColour(i));
    rect(100 + (50*i), 49, 100 + (50*i), 51);
   }
-  
-  //for (float i=0; i<percentMax; i+=0.01)   {
-  // fill(colorNegative.findColour(percentMax - i));  // reverse order
-  // stroke(colorNegative.findColour(percentMax - i));
-  // rect(100 + (100*i), 80, 100 + (100*i), 85);
-  //}
-  
-  //for (float i=0; i<percentMax; i+=0.01)   {
-  // fill(colorPositive.findColour(i));
-  // stroke(colorPositive.findColour(i));
-  // rect(150 + (100*i), 80, 150 + (100*i), 85);
-  //}
 }
 
 void legend() {
@@ -115,7 +110,7 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
   //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
   Collections.reverse(data);  // reverse order for display
-  
+   //<>//
   int ageIndex = 1;
   for (GenderData row : data)
   {
@@ -138,7 +133,7 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
       stroke(c); // larger the percent different the intense it gets - ask Jo can do from black to red? 
       strokeWeight(5);
       line(femalesalaryPos, agePos, malesalaryPos, agePos);// line
-
+ //<>//
       if (dist(mouseX, mouseY, (femalesalaryPos + malesalaryPos) / 2, agePos) < 20)
       {
         //tooltip.setText(String.format("%.2f %%\nMale: %.2f Female: %.2f", percentdiff*100, maleSalary, femaleSalary) );

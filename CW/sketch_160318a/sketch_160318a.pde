@@ -1,4 +1,4 @@
-import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   //<>// //<>//
+import org.gicentre.utils.colour.*;   // For colour tables.import org.gicentre.utils.colour.*;   //<>// //<>// //<>//
 import org.gicentre.utils.gui.*; // tooltips
 import controlP5.ControlP5; // buttons
 
@@ -30,7 +30,7 @@ void setup()
   
   cp5 = new ControlP5(this);
 
-  size(2000, 1500);  // Set up the sketch area 
+  size(1500, 1100);  // Set up the sketch area 
 
   all_occ = loadTable("data/alloccupations.csv", "header,csv");
 
@@ -120,7 +120,7 @@ void pageOverview() {
     new Chart("Professional occupations", loadData("", "Professional occupations")), 
     new Chart("Sales and customer service occupations", loadData("", "Sales and customer service occupations")), 
     new Chart("Skilled trades occupations", loadData("", "Skilled trades occupations")), 
-    }, 400, 300);
+    }, 475, 300);
 }
 
 void pageAdmin() {
