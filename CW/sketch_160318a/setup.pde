@@ -14,7 +14,7 @@ void key_buttons(int top, int left, Button[] buttons) {
       .setPosition(left + marg + (wid + marg) * i, top + marg)
       .setLabel(abbreviate(buttons[i].label, 22))
       .setFont(font)
-      .setColor(new CColor(header, legend, #FFFFFF, #F38630, #FFFFFF))
+      .setColor(new CColor(header, legend, #FFFFFF, #FFFFFF, #FFFFFF))
       .setSize(150, 20);
   }
 }

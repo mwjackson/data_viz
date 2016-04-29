@@ -10,8 +10,14 @@ PFont font, subTitleFont, titleFont;
 color header = color(74, 74, 74);
 color legend = color(255, 255, 255, 7);
 
-color male = color(144, 0, 255);
-color female = color(249, 233, 0);
+color male = color(144, 0, 255); // purple
+color female = color(249, 233, 0); // yellow
+color chartBg = color(225, 245, 254); //blue
+
+//color male = color(244, 67, 54); // red
+//color female = color(33, 150, 243); // blue
+//color chartBg = color(255, 253, 231); // yellow
+
 
 int headerHeight = 105;
 int titleSize = 20;
@@ -167,7 +173,7 @@ void chartArea(String name, float top, float bottom, float chartLeft, float char
   text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
 
   //show plot area as white box
-  fill(#BCF2FF);
+  fill(chartBg);
   rectMode(CORNERS);
   noStroke();
   rect(chartLeft, chartTop, chartRight, chartBottom);
