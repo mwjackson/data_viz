@@ -1,11 +1,8 @@
-import java.util.*; //<>// //<>// //<>//
-
-ColourTable colorPositive;   // Will store a Brewer colour table.
-ColourTable colorNegative; 
+import java.util.*;  //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 
 ColourTable colourTable; 
 
-PFont font, subTitleFont, titleFont;
+PFont menuFont, subTitleFont, titleFont;
 
 color header = color(74, 74, 74);
 color legend = color(255, 255, 255, 7);
@@ -16,34 +13,27 @@ color chartBg = color(225, 245, 254); //blue
 
 //color male = color(244, 67, 54); // red
 //color female = color(33, 150, 243); // blue
-//color chartBg = color(255, 253, 231); // yellow
-
+//color chartBg = color(255, 253, 231); // pale yellow
 
 int headerHeight = 105;
 int titleSize = 20;
 int subTitleSize = 16;
 
-public class Chart {
-  public final String name;
-  public final List<GenderData> data;
 
-  public Chart(String name, List<GenderData> data) {
-    this.name = name; //<>// //<>//
+// this class stores what we need to draw each chart
+public class Chart {
+  public final String name;  // the name
+  public final Boolean title;  // true if this a main title chart (eg. professionals)
+  public final List<GenderData> data;  // the data needed for the chart
+
+  public Chart(String name, Boolean title, List<GenderData> data) {
+    this.name = name; 
+    this.title = title;
     this.data = data;
   }
 }
 
-public class Button {
-  public final String id;
-  public final String label;
-
-  public Button(String id, String label) {
-    this.id = id;
-    this.label = label;
-  }
-}
-
-void title() { //<>// //<>//
+void title() { 
   fill(header);
   rect(0, 0, width, headerHeight); // header bg
 
@@ -55,20 +45,24 @@ void title() { //<>// //<>//
   fill(155);
   textFont(subTitleFont, subTitleSize);
   text("Median hourly pay (£) by age group", 250, 70);
-  
+
   // key
+  fill(legend);
+  noStroke();
+  rect(0, 0, 200, headerHeight);
+  
   fill(255);
   textAlign(LEFT);
   textSize(12);
   text("Female", 15, 55);
   text("Male", 145, 55);
-  noStroke();  //<>//
-  fill(female);  //<>//
+  noStroke(); 
+  fill(female); 
   ellipse(70, 50, 20, 20); //female salary plotted
   noStroke(); 
   fill(male); 
   ellipse(130, 50, 20, 20); //male salary plotted
-  
+
   fill(255);
   stroke(155); // larger the percent different the intense it gets - ask Jo can do from black to red? 
   strokeWeight(1);
@@ -78,26 +72,20 @@ void title() { //<>// //<>//
   text("-50%", 25, 80);
   text("+50%", 145, 80);
   text("Pay Gap", 80, 90);
-  
-  for (float i=percentMin; i<percentMax; i+=0.01)   {
-   fill(colourTable.findColour(i));  // reverse order
-   stroke(colourTable.findColour(i));
-   rect(100 + (50*i), 49, 100 + (50*i), 51);
+
+  for (float i=percentMin; i<percentMax; i+=0.01) {
+    fill(colourTable.findColour(i));  // reverse order
+    stroke(colourTable.findColour(i));
+    rect(100 + (50*i), 49, 100 + (50*i), 51);
   }
 }
 
-void legend() {
-  fill(legend);
-  noStroke();
-  rect(0, 0, 200, headerHeight);
-}
-
-void drawChart(String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {
+void drawChart(Boolean title, String name, float top, float left, float chartWidth, float chartHeight, List<GenderData> data) {
   float margin = 50;
 
   float bottom = top + chartHeight;
 
-  // Corners of the plotted chart
+  // calculate corners of the plotted chart
   float chartLeft = left + margin;
   float chartRight = left + chartWidth - margin;
   float chartTop = top + margin;
@@ -105,12 +93,14 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
 
   System.out.printf("name: %s \nchartLeft: %f chartRight: %f chartTop: %f chartBottom: %f\n", name, chartLeft, chartRight, chartTop, chartBottom); 
 
-  chartArea(name, top, bottom, chartLeft, chartRight, chartTop, chartBottom); //<>//
+  // draw the axes, background, labels etc
+  chartArea(title, name, top, bottom, chartLeft, chartRight, chartTop, chartBottom);
 
   //System.out.printf("dataMin: %s dataMax: %f\n", dataMin, dataMax); 
 
   Collections.reverse(data);  // reverse order for display
-   //<>//
+
+  // draw the individual data lines & ellipsis'
   int ageIndex = 1;
   for (GenderData row : data)
   {
@@ -128,12 +118,11 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
 
     if (maleSalary > 0 && femaleSalary > 0)
     {
-      //int c =  percentdiff >= 0 ? colorPositive.findColour(percentdiff) : colorNegative.findColour(Math.abs(percentdiff)); //<>//
       int c = colourTable.findColour(percentdiff);
-      stroke(c); // larger the percent different the intense it gets - ask Jo can do from black to red? 
+      stroke(c); // larger the percent different the intense it gets - ask Jo can do customised colours? 
       strokeWeight(5);
       line(femalesalaryPos, agePos, malesalaryPos, agePos);// line
- //<>//
+
       if (dist(mouseX, mouseY, (femalesalaryPos + malesalaryPos) / 2, agePos) < 20)
       {
         //tooltip.setText(String.format("%.2f %%\nMale: %.2f Female: %.2f", percentdiff*100, maleSalary, femaleSalary) );
@@ -148,7 +137,7 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
     {
       noStroke(); 
       fill(male); 
-      ellipse(malesalaryPos, agePos,dotSize, dotSize); //male salary plotted
+      ellipse(malesalaryPos, agePos, dotSize, dotSize); //male salary plotted
     }
 
     if (femaleSalary>0)
@@ -161,11 +150,16 @@ void drawChart(String name, float top, float left, float chartWidth, float chart
   }
 }
 
-void chartArea(String name, float top, float bottom, float chartLeft, float chartRight, float chartTop, float chartBottom) {
+void chartArea(Boolean title, String name, float top, float bottom, float chartLeft, float chartRight, float chartTop, float chartBottom) {
   fill(0);
   textAlign(CENTER);
   textSize(12);
-  text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
+
+  if (title) {
+    text(name.toUpperCase(), centreOfChart(chartLeft, chartRight), top + 20);
+  } else {
+    text(name, centreOfChart(chartLeft, chartRight), top + 20);
+  }
 
   //show plot area as white box
   fill(chartBg);

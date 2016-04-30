@@ -1,7 +1,19 @@
 import controlP5.CColor; //<>// //<>//
 import java.lang.*;
 
-void key_buttons(int top, int left, Button[] buttons) {
+// this class stores what we need for each menu button
+public class Button {
+  public final String id;
+  public final String label;
+
+  public Button(String id, String label) {
+    this.id = id;
+    this.label = label;
+  }
+}
+
+// draw a row of menu buttons
+void draw_buttons(int top, int left, Button[] buttons) {
   int wid = 150;
   int marg = 10;
 
@@ -12,8 +24,8 @@ void key_buttons(int top, int left, Button[] buttons) {
     cp5.addButton(id)
       .setValue(0)
       .setPosition(left + marg + (wid + marg) * i, top + marg)
-      .setLabel(abbreviate(buttons[i].label, 22))
-      .setFont(font)
+      .setLabel(abbreviate(buttons[i].label, 17))
+      .setFont(menuFont)
       .setColor(new CColor(header, legend, #FFFFFF, #FFFFFF, #FFFFFF))
       .setSize(150, 20);
   }
